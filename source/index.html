@@ -7,19 +7,21 @@
   <body>
     <header class="main-head">
       <a href="" class="main-head__logo logo-icon">
-        <img src="" alt="" class="logo-icon__img">
-      </a>
-      <a href="" class="main-head__logo-text logo-text">
-        <img src="" alt="" class="logo-text__img">
-      </a>
+      </a> 
       <div class="main-head__nav main-nav">
-        <button type="buton" class="main-nav__nav-btn nav-btn">
-          <img src="" alt="" class="nav-btn__img">
+        <button type="buton" class="main-nav__nav-btn">
+          <span class="visually-hidden">Управление меню</span> <!--полоски меню = псевдоэлемент background-color -->
         </button>
         <ul class="main-head__nav-list nav-list">
-          <li class="nav-list__element">Главная</li>
-          <li class="nav-list__element">Каталог продукции</li>
-          <li class="nav-list__element">Подбор программы</li>
+          <li class="nav-list__element">
+            <a href="" class="nav-list__element">Главная</a>
+          </li>
+          <li class="nav-list__element">
+            <a href="" class="nav-list__element">Каталог продукции</a>
+          </li>
+          <li class="nav-list__element">
+            <a href="" class="nav-list__element">Подбор программы</a>
+          </li>
         </ul>
       </div>
     </header>
@@ -39,7 +41,7 @@
         </div>
         <div class="food-program__item program-description">
           <h2 class="visually-hidden">Программа питания на набор веса</h2>
-          <h3 class="program-desscription__title">Набор массы</h3>
+          <h3 class="program-description__title">Набор массы</h3>
           <p class="program-description__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <a href="" class="program-description__btn">Каталог pro</a>
         </div>
@@ -62,38 +64,33 @@
       </section>
     </main>
     <footer class="footer-block">
-      <section class="footer-block__address-block address-block">
+      <section class="footer-block__address address-block">
         <p class="address-block__text-left">Приглашаем к сотрудничеству дилеров!</p>
         <p class="address-block__text-right">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </section>
       <div class="footer-block__map-wrap">
       </div>
-      <section class="footer-block__ft-last ft-last">
-        <a href="" class="ft-last__logo logo-icon-ft">
-        <img src="" alt="" class="logo-icon-ft__img">
-      </a>
-      <a href="" class="ft-last__logo-text logo-text-ft">
-        <img src="" alt="" class="logo-text-ft__img-ft">
-      </a>
-
-        <div class="ft-last__networks networks">
-          <a href="" class="networks__link vk-link">
+      <div class="footer-block__content footer-content">
+        <a href="" class="footer-content__logo footer-logo">
+        </a>
+        <div class="footer-content__networks networks">
+          <a href="" class="networks__link">
             
           </a>
-          <a href="" class="networks__link insta-link">
+          <a href="" class="networks__link">
             
           </a>
-          <a href="" class="networks__link fb-link">
+          <a href="" class="networks__link">
             
           </a>
         </div>
-        <div class="ft-last__dev-logo dev-logo">
-          <a href="" class="dev-logo__text">HTML Academy</a>
-          <a href="" class="dev-logo__logo">
+        <div class="footer-content__dev dev-logo">
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="dev-logo__text">HTML Academy</a>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="dev-logo__logo">
             <img src="" alt="" class="dev-logo__img">
           </a>
         </div>
-      </section>
+      </div>
     </footer>
   </body>
 </html>

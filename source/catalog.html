@@ -5,8 +5,25 @@
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body>
-    <header>
-
+    <header class="main-head">
+      <a href="index.html" class="main-head__logo logo-icon">
+      </a> 
+      <div class="main-head__nav main-nav">
+        <button type="buton" class="main-nav__nav-btn">
+          <span class="visually-hidden">Управление меню</span> <!--полоски меню = псевдоэлемент background-color -->
+        </button>
+        <ul class="main-head__nav-list nav-list">
+          <li class="nav-list__element">
+            <a href="" class="nav-list__element">Главная</a>
+          </li>
+          <li class="nav-list__element">
+            <a href="" class="nav-list__element">Каталог продукции</a>
+          </li>
+          <li class="nav-list__element">
+            <a href="" class="nav-list__element">Подбор программы</a>
+          </li>
+        </ul>
+      </div>
     </header>
     <main>
       <div class="main-catalog">
@@ -14,8 +31,12 @@
         <ul class="catalog-list">
           <li class="catalog-list__item">
             <div class="catalog-item">
-              <img src="" alt="" class="catalog-item__img">
-              <a href="" class="catalog-item__title">Cat energy pro 500 г</a>
+              <a href="" class="catalog-item__link">
+                <img src="" alt="" class="catalog-item__img">
+              </a>
+              <a href="" class="catalog-item__title-link">
+                <h2 class="catalog-item__title">Cat energy pro 500 г</h2>
+              </a>
               <table class="catalog-item__feature feature-tbl">
                 <tr class="feature-tbl__row ftr-row">
                   <td class="ftr-row__name">Объем</td>
@@ -61,8 +82,34 @@
         <p class="gift-block__text">Закажите все и получите чехол для кота в подарок!</p>
       </div>
     </main>
-    <footer>
-
+    <footer class="footer-block">
+      <section class="footer-block__address address-block">
+        <p class="address-block__text-left">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="address-block__text-right">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      </section>
+      <div class="footer-block__map-wrap">
+      </div>
+      <div class="footer-block__content footer-content">
+        <a href="index.html" class="footer-content__logo footer-logo">
+        </a>
+        <div class="footer-content__networks networks">
+          <a href="" class="networks__link">
+            
+          </a>
+          <a href="" class="networks__link">
+            
+          </a>
+          <a href="" class="networks__link">
+            
+          </a>
+        </div>
+        <div class="footer-content__dev dev-logo">
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="dev-logo__text">HTML Academy</a>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="dev-logo__logo">
+            <img src="" alt="" class="dev-logo__img">
+          </a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
