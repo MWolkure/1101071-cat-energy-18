@@ -8,27 +8,26 @@
     <header class="main-head">
       <a href="index.html" class="main-head__logo logo-icon"></a> 
       <div class="main-head__nav main-nav">
-        <button type="buton" class="main-nav__nav-btn">
+        <button type="button" class="main-nav__nav-btn">
           <span class="visually-hidden">Управление меню</span> <!--полоски меню = псевдоэлемент background-color -->
         </button>
         <ul class="main-head__nav-list nav-list">
           <li class="nav-list__element">
-            <a href="" class="nav-list__element">Главная</a>
+            <a href="index.html" class="nav-list__link">Главная</a>
           </li>
           <li class="nav-list__element">
-            <a href="" class="nav-list__element">Каталог продукции</a>
+            <a href="catalog.html" class="nav-list__link">Каталог продукции</a>
           </li>
           <li class="nav-list__element">
-            <a href="" class="nav-list__element">Подбор программы</a>
+            <a href="" class="nav-list__link">Подбор программы</a>
           </li>
         </ul>
       </div>
     </header>
     <main>
       <form class="order-form">
-        <h1 class="order-form__title">Подбор программы</h1>
+        <h1 class="order-form__head">Подбор программы</h1>
         <p class="order-form__text-before">Заполните анкету и мы подберем программу питания для вашего кота</p>
-        <div class="order-form__block">
           <div class="order-form__section order-form__section--info">
             <label class="order-form__field-label" for="cat-name">Имя:*</label>
             <input type="text" class="order-form__field" id="cat-name" required>
@@ -46,28 +45,27 @@
             <label class="order-form__radio-label" for="ask-inp">Не знаю (нужен ваш совет)</label>
           </div>
           <div class="order-form__section order-form__section--contacts">
-            <h2 class="order-form__contacts-title">Контактные данные (владельца кота)</h2>
+            <h2 class="order-form__title">Контактные данные (владельца кота)</h2>
             <label class="order-form__field-label" for="mail-inp">E-mail:*</label>
             <input type="tel" class="order-form__field" id="mail-inp" required>
             <label class="order-form__field-label" for="tel-inp">Телефон:*</label>
             <input type="email" class="order-form__field" id="tel-inp" required>
           </div>
-          <div class="order-form__section comment-field">
-            <h2 class="comment-field__title">Комментарий</h2>
-            <textarea class="comment-field__text-field" rows="3" cols="33">Расскажите обо всех повадках кота</textarea>
+          <div class="order-form__section order-form__section--comment">
+            <h2 class="order-form__title">Комментарий</h2>
+            <textarea class="order-form__comment" rows="3" cols="33">Расскажите обо всех повадках кота</textarea>
           </div>         
-        </div>
-        <div class="order-form__block extra-items">
-          <h2 class="extra-items__title">Дополнительно</h2>
-          <input type="checkbox" class="visually-hidden" id="ch-box-1">
-          <label class="extra-items__name" for="ch-box-1">Сахарозаменитель</label>
-          <input type="checkbox" class="visually-hidden" id="ch-box-2">
-          <label class="extra-items__name" for="ch-box-2">Питьевая вода</label>
-          <input type="checkbox" class="visually-hidden" id="ch-box-3">
-          <label class="extra-items__name" for="ch-box-3">Молоко</label>
-          <input type="checkbox" class="visually-hidden" id="ch-box-4">
-          <label class="extra-items__name" for="ch-box-4">Витамины</label>
-        </div>
+          <div class="order-form__block order-form__section--extra">
+            <h2 class="order-form__title">Дополнительно</h2>
+            <input type="checkbox" class="visually-hidden" id="ch-box-1">
+            <label class="order-form__checkbox-label" for="ch-box-1">Сахарозаменитель</label>
+            <input type="checkbox" class="visually-hidden" id="ch-box-2">
+            <label class="order-form__checkbox-label" for="ch-box-2">Питьевая вода</label>
+            <input type="checkbox" class="visually-hidden" id="ch-box-3">
+            <label class="order-form__checkbox-label" for="ch-box-3">Молоко</label>
+            <input type="checkbox" class="visually-hidden" id="ch-box-4">
+            <label class="order-form__checkbox-label" for="ch-box-4">Витамины</label>
+          </div>
         <button type="submit" class="order-form__btn btn">Отправить заявку</button>
         <p class="order-form__text-after">* - Обязательные поля</p>
       </form>
