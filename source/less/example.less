@@ -1,0 +1,82 @@
+.example {
+	background-color: @color-add;
+	padding: 33px 20px 38px 20px;
+	box-sizing: border-box;
+	position: relative;
+
+}
+.example__title {
+	.head-1;
+  text-align: left;
+}
+.example__text {
+  .text-medium;
+  text-align: left;
+}
+.example__wrapper {
+}
+//блок в рамке 5кг:
+.example__text-weight {
+	span {
+		.head-2;
+	}
+	.text-small;
+  box-sizing: border-box;
+  border-top: ;
+  border-left: ;
+  border-right: ; //или как их сделать? спану, и задать ему размер?
+}
+//нижние границы рамки:
+.example__text-weight::before {
+	content: "";
+	.line-other-short;
+	width: 20px;
+	position: absolute;
+
+}
+.example__text-weight::after {
+	content: "";
+	.line-other-short;
+	width: 20px;
+	position: absolute;
+
+}
+//блок в рамке 60 дней:
+.example__text-time  {
+	span {
+		.head-2;
+	}
+	.text-small;
+
+}
+//нижние границы рамки:
+.example__text-time::before {
+	content: "";
+	.line-other-short;
+	width: 20px;
+	position: absolute;
+
+}
+.example__text-time::after {
+	content: "";
+	.line-other-short;
+	width: 20px;
+	position: absolute;
+
+}
+
+
+.example__text-money {
+
+}
+.example__text-result {
+
+}
+.example__text-result-left {
+	.text-big;
+
+}
+.example__text-result-right {
+	.text-big;
+
+}

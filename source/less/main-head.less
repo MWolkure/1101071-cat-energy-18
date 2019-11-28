@@ -1,0 +1,38 @@
+.main-head {
+	padding: 11px 20px 17px 20px;
+	position: relative;
+}
+.main-head__logo-link {
+	text-decoration: none;
+}
+//плоска внизу серая:
+.main-head__logo-link::after {
+	content: "";
+	.line-main;
+	position: absolute;
+	bottom:;
+	left: ;
+}
+.main-head__logo {
+	width: 191px;
+}
+.main-head__nav-btn {
+	margin-left: auto;
+	.text;
+	width: 24px;
+}
+.main-head__nav-btn::after { //или фоном?
+	content: url(img/icon-mobile-menu.svg);
+	width: 24px;
+	position: absolute;
+	top: ;
+  right: ;
+}
+//крестик:
+.main-head__nav-btn::after:hover {
+	content: url(img/icon-close.svg);
+  width: 18px;
+  position: absolute;
+	top: ;
+  right: ;
+}

@@ -1,0 +1,61 @@
+.food-program {
+	width: 280px;
+	background-color: @color-add;
+
+}
+.food-program__item {
+	padding: 39px 21px 23px 21px;
+	box-sizing: border-box;
+	position: relative;
+}
+.food-program__title {
+	.head-2;
+}
+.food-program__title--slim::before {
+	content: url(../img/icon-cat-slim.svg);
+	width: 35px;
+	position: absolute;
+}
+.food-program__title--fat::before {
+	content: url(../img/icon-cat-pro.svg);
+	width: 67px;
+	position: absolute;
+}
+.food-program__title--slim::after { /*зеленый круг*/
+	content: "";
+	width: 50px;
+	height: 50px;
+  border-radius: 50%;
+  background-color: @color-main;
+  position: absolute;
+}
+.food-program__title--fat::after {
+	content: "";
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: @color-main;
+	position: absolute;
+}
+.food-program__text {
+	text-align: left;
+  .text-medium;
+}
+.food-program__btn-link {
+	text-decoration: none;
+  text-align: left;
+  .text-big;
+  line-height: 16px;
+}
+.food-program__btn::before { /*серая полоска сверху кнопки*/
+	content: "";
+	background-color: #d9d9d9;
+    height: 1px;
+	width: 240px;
+	position: absolute;
+}
+.food-program__btn::after { /*стрелка*/
+	content: url(../img/icon-right-arrow-long.svg);
+	width: 24px;
+	position: absolute;
+}
