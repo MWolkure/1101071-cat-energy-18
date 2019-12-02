@@ -1,17 +1,36 @@
 .food-program {
-	width: 280px;
-	background-color: @color-add;
-
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .food-program__item {
-	padding: 39px 21px 23px 21px;
-	box-sizing: border-box;
-	position: relative;
+  background-color: @color-add;
+  position: relative;
 }
 .food-program__title {
-	.head-2;
+	.text;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: normal;
 }
-.food-program__title--slim::before {
+.food-program__text {
+  .text;
+  border-bottom: 1px solid #d9d9d9;
+  text-align: left;
+  font-family: arial;
+  font-size: 14px;
+  line-height: 18px;
+}
+.food-program__btn-link {
+  .text;
+  text-decoration: none;
+  text-align: left;
+  line-height: 16px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+
+.food-program__title--slim::before { 
 	content: url(../img/icon-cat-slim.svg);
 	width: 35px;
 	position: absolute;
@@ -29,7 +48,7 @@
   background-color: @color-main;
   position: absolute;
 }
-.food-program__title--fat::after {
+.food-program__title--fat::after { /*зеленый круг*/
 	content: "";
 	width: 50px;
 	height: 50px;
@@ -37,23 +56,7 @@
 	background-color: @color-main;
 	position: absolute;
 }
-.food-program__text {
-	text-align: left;
-  .text-medium;
-}
-.food-program__btn-link {
-	text-decoration: none;
-  text-align: left;
-  .text-big;
-  line-height: 16px;
-}
-.food-program__btn::before { /*серая полоска сверху кнопки*/
-	content: "";
-	background-color: #d9d9d9;
-    height: 1px;
-	width: 240px;
-	position: absolute;
-}
+
 .food-program__btn::after { /*стрелка*/
 	content: url(../img/icon-right-arrow-long.svg);
 	width: 24px;

@@ -1,82 +1,72 @@
 .example {
 	background-color: @color-add;
 	padding: 33px 20px 38px 20px;
-	box-sizing: border-box;
 	position: relative;
-
 }
 .example__title {
-	.head-1;
+	.text;
   text-align: left;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 60px; /*зачем оно вообще? аж 60 ?*/
 }
 .example__text {
-  .text-medium;
+  .text;
   text-align: left;
+  font-family: arial;
+  line-height: 18px;
 }
-.example__wrapper {
-}
+
 //блок в рамке 5кг:
 .example__text-weight {
+	.text;
 	span {
-		.head-2;
+		font-size: 24px;
 	}
-	.text-small;
+  font-family: arial;
+  font-size: 12px;
+
   box-sizing: border-box;
-  border-top: ;
-  border-left: ;
-  border-right: ; //или как их сделать? спану, и задать ему размер?
+  border-top: 1px solid #cdcdcd;
+  border-left: 1px solid #cdcdcd;
+  border-right:1px solid #cdcdcd; //или как их сделать? спану, и задать ему размер?
 }
 //нижние границы рамки:
 .example__text-weight::before {
 	content: "";
-	.line-other-short;
-	width: 20px;
-	position: absolute;
+ background-color: #cdcdcd;
+ height: 1px;
+ width: 20px;
+ position: absolute;
 
 }
 .example__text-weight::after {
 	content: "";
-	.line-other-short;
-	width: 20px;
-	position: absolute;
+  background-color: #cdcdcd;
+  height: 1px;
+  width: 20px;
+  position: absolute;
 
 }
 //блок в рамке 60 дней:
 .example__text-time  {
+	.text;
 	span {
-		.head-2;
+		font-size: 24px;
 	}
-	.text-small;
-
-}
-//нижние границы рамки:
-.example__text-time::before {
-	content: "";
-	.line-other-short;
-	width: 20px;
-	position: absolute;
-
-}
-.example__text-time::after {
-	content: "";
-	.line-other-short;
-	width: 20px;
-	position: absolute;
-
+  font-family: arial;
+  font-size: 12px;
 }
 
-
-.example__text-money {
-
-}
-.example__text-result {
-
-}
 .example__text-result-left {
-	.text-big;
+	font-size: 16px;
+	line-height: 20px;
+	text-transform: uppercase;
 
 }
 .example__text-result-right {
-	.text-big;
+	font-size: 16px;
+	line-height: 20px;
+	text-transform: uppercase;
 
 }

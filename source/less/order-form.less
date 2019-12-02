@@ -1,105 +1,98 @@
 .order-form {
-  .text-medium-upper;
   padding: 31px 20px 35px 20px;
   text-align: left;
+  text-transform: uppercase;
   position: relative;
+  font-size: 16px;
 }
+.order-form__section {
+  .text;
+  list-style: none;
+  
+}
+
 .order-form__head {
-	.head-1;
+	.text;
+  font-size: 36px;
+  line-height: 60px;
+  text-transform: none;
+  font-weight: normal;
 }
 .order-form__title {
-  .head-2;
+  .text;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: none;
+  font-weight: normal;
 }
 .order-form__text-before {
 	.text;
 	font-size: 14px;
 }
 .order-form__text-after {
-	.text-medium;
+	.text;
+  font-family: arial;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: none;
 }
-.order-form__btn {
-	.button;
+.order-form__comment {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  /*text-transform: uppercase; - текст внутри поля пропадает ,если раскомментить О_О*/
 }
 
 //зеленые полоски
 .order-form__section--radio::after {
   content: "";
-  .line;
+  background-color: @color-main;
+  height: 3px;
   width: 99px;
   position:  absolute;
 }
 .order-form__section--comment::before {
   content: "";
-  .line;
+  background-color: @color-main;
+  height: 3px;
   width: 158px;
   position:  absolute;
 }
 .order-form__section--extra::before {
   content: "";
-  .line;
+  background-color: @color-main;
+  height: 3px;
   width: 136px;
   position:  absolute;
 }
 
-//иконки в инпутах через
-.order-form__section--contacts::after //???
-.order-form__section--contacts::before
+/*иконки в инпутах через
+.order-form__section--contacts::after   ???
+.order-form__section--contacts::before*/
 
 
 
-//а как их станет по 3 штуки?... 
-//круглая рамка радио
+/*а как их станет по 3 штуки?... 
+круглая рамка радио
 .order-form__radio-label::before {
 	content: "";
 
-}
+  }*/
+
 //зеленый круг внутри радио
 .order-form__radio-label::after {
   content: "";
   background-color: @color-main;
-  width: ;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   position: absolute;
-  top:;
-  left: ;
+
 }
 
 
 
-.order-form__section {
-  list-style: none;
-	.text;
-}
-.order-form__section--info {
-	
-}
-.order-form__section--contacts {
 
-}
-.order-form__section--radio {
-	/*как сделать рамку,ширина которой 320рх, для этого блока, если у меня 
-	боковые паддинги стоят для всей формы 20рх? Ну неужели же 
-	делать паддинги не для всей формы, а для каждого блока отдельно?(( */
-  
- 
-}
-.order-form__section--comment {
-  
-}
-.order-form__section--extra {
 
-}
-.order-form__row {
-
-}
-.order-form__field-label {
-
-}
-.order-form__field {
-
-}
-.order-form__radio-label {
-
-}
 
 
