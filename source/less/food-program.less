@@ -6,17 +6,12 @@
   background-color: @color-add;
   position: relative;
 }
-.food-program__title {
-	.text;
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: normal;
-}
+
 .food-program__text {
   .text;
   border-bottom: 1px solid #d9d9d9;
   text-align: left;
-  font-family: arial;
+  font-family: arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
 }
@@ -27,34 +22,39 @@
   line-height: 16px;
   font-size: 16px;
   text-transform: uppercase;
+  color: #111111;
 }
-
 
 .food-program__title--slim::before { 
 	content: url(../img/icon-cat-slim.svg);
 	width: 35px;
 	position: absolute;
+  top: 0;
+  left: 0;
 }
 .food-program__title--fat::before {
 	content: url(../img/icon-cat-pro.svg);
 	width: 67px;
 	position: absolute;
+  top: 0;
+  left: 0;
 }
-.food-program__title--slim::after { /*зеленый круг*/
-	content: "";
-	width: 50px;
-	height: 50px;
+.food-program__title {
+  .text;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: normal;
+
+  &::after { /*зеленый круг*/  //почему он НАД иконками, хоть до них в коде поставь,хоть после?
+  content: "";
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: @color-main;
   position: absolute;
-}
-.food-program__title--fat::after { /*зеленый круг*/
-	content: "";
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	background-color: @color-main;
-	position: absolute;
+  top: 0;
+  left: 0;
+ }
 }
 
 .food-program__btn::after { /*стрелка*/

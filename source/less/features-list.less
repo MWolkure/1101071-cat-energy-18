@@ -4,35 +4,32 @@
 }
 .features-list__item {
 	position: relative;
-}
-.features-list__item-text {
-	.text;
-	font-family: arial;
-	line-height: 18px;
-	text-align: left;
-	width: 192px;
-	margin-left: 80px;
-}
 
-.features-list__item--icon-leaf::before { /*зеленый квадрат*/
+  &::before { /*зеленый квадрат*/
   content: "";
   background-color: @color-main;
   width: 60px;
   height: 60px;
   position: absolute;
+  top: 0;
+  left: 0;
+ }
 }
+
+.features-list__item-text {
+	.text;
+	font-family: arial, sans-serif;
+	line-height: 18px;
+	text-align: left;
+	/*width: 192px;*/
+	margin-left: 80px;
+}
+
+
 .features-list__item--icon-leaf::after {
 	content: url(../img/advantage-leaf@1x.png);
 	width: 26px;
 	position: absolute;
-
-}
-.features-list__item--icon-powder::before {
-  content: "";
-  background-color: @color-main;
-  width: 60px;
-  height: 60px;
-  position: absolute;
 
 }
 .features-list__item--icon-powder::after {
@@ -41,28 +38,14 @@
 	position: absolute;
 
 }
-.features-list__item--icon-dining::before {
-  content: "";
-  background-color: @color-main;
-  width: 60px;
-  height: 60px;
-  position: absolute;
 
-}
 .features-list__item--icon-dining::after {
 	content: url(../img/advantage-dining@1x.png);
 	width: 23px;
 	position: absolute;
 
 }
-.features-list__item--icon-clock::before {
-  content: "";
-  background-color: @color-main;
-  width: 60px;
-  height: 60px;
-  position: absolute;
 
-}
 .features-list__item--icon-clock::after {
 	content: url(../img/advantage-clock@1x.png);
 	width: 26px;

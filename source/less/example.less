@@ -13,57 +13,45 @@
 .example__text {
   .text;
   text-align: left;
-  font-family: arial;
-  line-height: 18px;
+  font-family: arial, sans-serif;
 }
 .example__text-money {
   .text;
   text-transform: uppercase;
 }
-
-//блок в рамке 5кг:
-.example__text-weight {
+.example__wrapper {
+  min-width: 124px;
+  text-align: center;
+}
+//блоки в рамке:
+.example__text-border {
 	.text;
-	span {
-		font-size: 24px;
-    text-transform: uppercase;
-	}
-
-  font-family: arial;
-  font-size: 12px;
-
+  display: inline-block;
+  font-size: 24px;
+  min-width: 124px;
+  text-transform: uppercase;
   box-sizing: border-box;
-  border-top: 1px solid #cdcdcd;
-  border-left: 1px solid #cdcdcd;
-  border-right:1px solid #cdcdcd; //или как их сделать? спану, и задать ему размер?
-}
-//нижние границы рамки:
-.example__text-weight::before {
-	content: "";
- background-color: #cdcdcd;
- height: 1px;
- width: 20px;
- position: absolute;
+  border: 1px solid #cdcdcd;
+  position: relative;
+  padding: 15px;
+  text-align: center;
+ 
+  span {
+    font-family: arial, sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: none;
+    transform: translateX(-50%) translateY(-10px);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    background-color: @color-add;
+    padding: 5px 15px 0 15px;
 
+  }
 }
-.example__text-weight::after {
-	content: "";
-  background-color: #cdcdcd;
-  height: 1px;
-  width: 20px;
-  position: absolute;
 
-}
-//блок в рамке 60 дней:
-.example__text-time  {
-	.text;
-	span {
-		font-size: 24px;
-    text-transform: uppercase;
-	}
-  font-family: arial;
-  font-size: 12px;
-}
+
 
 .example__text-result-left {
 	font-size: 16px;

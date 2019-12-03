@@ -24,6 +24,7 @@
   line-height: 24px;
   text-transform: none;
   font-weight: normal;
+
 }
 .order-form__text-before {
 	.text;
@@ -31,7 +32,7 @@
 }
 .order-form__text-after {
 	.text;
-  font-family: arial;
+  font-family: arial, sans-serif;
   font-size: 14px;
   line-height: 16px;
   text-transform: none;
@@ -40,39 +41,22 @@
   font-family: inherit;
   font-size: 16px;
   line-height: 18px;
-  /*text-transform: uppercase; - текст внутри поля пропадает ,если раскомментить О_О*/
+  text-transform: uppercase; 
 }
 
-//зеленые полоски
-.order-form__section--radio::after {
-  content: "";
-  background-color: @color-main;
-  height: 3px;
-  width: 99px;
-  position:  absolute;
-}
-.order-form__section--comment::before {
-  content: "";
-  background-color: @color-main;
-  height: 3px;
-  width: 158px;
-  position:  absolute;
-}
-.order-form__section--extra::before {
-  content: "";
-  background-color: @color-main;
-  height: 3px;
-  width: 136px;
-  position:  absolute;
-}
+/*зеленые полоски доделать
 
-/*иконки в инпутах через
+  background-color: @color-main;
+  height: 3px;
+ 
+
+иконки в инпутах через
 .order-form__section--contacts::after   ???
 .order-form__section--contacts::before*/
 
 
 
-/*а как их станет по 3 штуки?... 
+/*
 круглая рамка радио
 .order-form__radio-label::before {
 	content: "";
