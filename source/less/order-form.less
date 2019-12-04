@@ -1,0 +1,75 @@
+.order-form {
+  padding: 31px 20px 35px 20px;
+  text-align: left;
+  text-transform: uppercase;
+  position: relative;
+  font-size: 16px;
+}
+
+.order-form__section {
+  .text;
+  list-style: none;
+}
+
+.order-form__head {
+  .text;
+  font-size: 36px;
+  line-height: 60px;
+  text-transform: none;
+  font-weight: 400;
+}
+
+.order-form__title {
+  .text;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: none;
+  font-weight: 400;
+}
+
+.order-form__text-before {
+  .text;
+  font-size: 14px;
+}
+
+.order-form__text-after {
+  .text;
+  font-family: "arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: none;
+}
+
+.order-form__comment {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+/*зеленые полоски доделать
+
+  background-color: @color-main;
+  height: 3px;
+
+
+иконки в инпутах через
+.order-form__section--contacts::after   ???
+.order-form__section--contacts::before
+
+
+круглая рамка радио
+.order-form__radio-label::before {
+	content: "";
+
+  }*/
+
+//зеленый круг внутри радио
+.order-form__radio-label::after {
+  content: "";
+  background-color: @color-main;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+}

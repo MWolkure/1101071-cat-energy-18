@@ -1,0 +1,31 @@
+.more-items {
+  position: relative;
+  text-align: center;
+}
+
+.more-items__text {
+  .text;
+  font-family: "arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
+}
+
+.more-items__title {
+  .text;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.more-items__title::before {
+  content: url("../img/icon-plus-mobile.svg");
+  width: 30px;
+  position: absolute;
+}
+
+.more-items__btn {
+  background-color: @color-add;
+  color: #444444;
+}

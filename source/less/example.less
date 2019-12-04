@@ -1,0 +1,67 @@
+.example {
+  background-color: @color-add;
+  padding: 33px 20px 38px 20px;
+  position: relative;
+}
+
+.example__title {
+  .text;
+  text-align: left;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 60px; /*зачем оно вообще? аж 60 ?*/
+}
+
+.example__text {
+  .text;
+  text-align: left;
+  font-family: "arial", sans-serif;
+}
+
+.example__text-money {
+  .text;
+  text-transform: uppercase;
+}
+
+.example__wrapper {
+  min-width: 124px;
+  text-align: center;
+}
+
+//блоки в рамке:
+.example__text-border {
+  .text;
+  display: inline-block;
+  font-size: 24px;
+  min-width: 124px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  border: 1px solid #cdcdcd;
+  position: relative;
+  padding: 15px;
+  text-align: center;
+  span {
+    font-family: "arial", sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: none;
+    transform: translateX(-50%) translateY(-10px);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    background-color: @color-add;
+    padding: 5px 15px 0 15px;
+  }
+}
+
+.example__text-result-left {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.example__text-result-right {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
