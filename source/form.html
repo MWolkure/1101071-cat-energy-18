@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -29,34 +30,36 @@
     <form class="order-form">
       <h1 class="order-form__head">Подбор программы</h1>
       <p class="order-form__text-before">Заполните анкету и мы подберем программу питания для вашего кота</p>
-      <ul class="order-form__section order-form__section--info">
-        <li class="order-form__row">
-          <label class="order-form__field-label" for="cat-name">Имя:*</label>
-          <input type="text" class="order-form__field" id="cat-name" required>
-        </li>
-        <li class="order-form__row">
-          <label class="order-form__field-label" for="weight">Вес (кг):*</label>
-          <input type="text" class="order-form__field" id="weight" required>
-        </li>
-        <li class="order-form__row">
-          <label class="order-form__field-label" for="age">Возраст (лет):</label>
-          <input type="text" class="order-form__field" id="age">
-        </li>
-      </ul>
-      <ul class="order-form__section order-form__section--radio">
-        <li class="order-form__row">
-          <input type="radio" class="visually-hidden" id="slim-inp">
-          <label class="order-form__radio-label" for="slim-inp">Похудение</label>
-        </li>
-        <li class="order-form__row">
-          <input type="radio" class="visually-hidden" id="fat-inp">
-          <label class="order-form__radio-label" for="fat-inp">Набор массы</label>
-        </li>
-        <li class="order-form__row">
-          <input type="radio" class="visually-hidden" id="ask-inp">
-          <label class="order-form__radio-label" for="ask-inp">Не знаю (нужен ваш совет)</label>
-        </li>
-      </ul>
+      <div class="order-form__wrapper">
+        <ul class="order-form__section order-form__section--info">
+          <li class="order-form__row">
+            <label class="order-form__field-label" for="cat-name">Имя:*</label>
+            <input type="text" class="order-form__field" id="cat-name" required>
+          </li>
+          <li class="order-form__row">
+            <label class="order-form__field-label" for="weight">Вес (кг):*</label>
+            <input type="text" class="order-form__field" id="weight" required>
+          </li>
+          <li class="order-form__row">
+            <label class="order-form__field-label" for="age">Возраст (лет):</label>
+            <input type="text" class="order-form__field" id="age">
+          </li>
+        </ul>
+        <ul class="order-form__section order-form__section--radio">
+          <li class="order-form__row">
+            <input type="radio" class="visually-hidden" id="slim-inp">
+            <label class="order-form__radio-label" for="slim-inp">Похудение</label>
+          </li>
+          <li class="order-form__row">
+            <input type="radio" class="visually-hidden" id="fat-inp">
+            <label class="order-form__radio-label" for="fat-inp">Набор массы</label>
+          </li>
+          <li class="order-form__row">
+            <input type="radio" class="visually-hidden" id="ask-inp">
+            <label class="order-form__radio-label" for="ask-inp">Не знаю (нужен ваш совет)</label>
+          </li>
+        </ul>
+      </div>
       <h2 class="order-form__title">Контактные данные (владельца кота)</h2>
       <ul class="order-form__section order-form__section--contacts">
         <li class="order-form__row">
@@ -91,8 +94,10 @@
           <label class="order-form__checkbox-label" for="ch-box-4">Витамины</label>
         </li>
       </ul>
-      <button type="submit" class="order-form__btn btn">Отправить заявку</button>
-      <p class="order-form__text-after">* - Обязательные поля</p>
+      <div class="order-form__after-wrapper">
+        <a href="" class="order-form__btn btn">Отправить заявку</a>
+        <p class="order-form__text-after">* - Обязательные поля</p>
+      </div>
     </form>
   </main>
   <footer class="footer-block">

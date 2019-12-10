@@ -1,5 +1,6 @@
 .order-form {
-  padding: 31px 20px 35px 20px;
+  padding-top: 31px;
+  padding-bottom: 35px;
   text-align: left;
   text-transform: uppercase;
   position: relative;
@@ -9,6 +10,8 @@
 .order-form__section {
   .text;
   list-style: none;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .order-form__head {
@@ -72,4 +75,61 @@
   height: 12px;
   border-radius: 50%;
   position: absolute;
+}
+
+@media (min-width: @tablet) {
+  .order-form {
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 66px;
+    padding-bottom: 72px;
+  }
+
+  .order-form__section {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .order-form__section--extra {
+    display:  flex; // да же? или как в 2 колонки сделать?
+  }
+
+  .order-form__section--radio {
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    padding: 36px 88px;
+  }
+
+  .order-form__head {
+    font-size: 60px;
+  }
+
+  .order-form__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .order-form__text-before {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .order-form__text-after {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .order-form__after-wrapper {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop) {
+  .order-form__wrapper {
+    display: flex;
+  }
+
+  .order-form__section--contacts {
+    display: flex;
+  }
 }

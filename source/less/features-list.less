@@ -49,3 +49,25 @@
   width: 26px;
   position: absolute;
 }
+
+@media (min-width: @tablet) {
+  .features-list {
+    padding-right: 30px;
+    padding-left: 30px;
+    display: flex;
+  }
+
+  .features-list__item::before {
+    width: 80px;
+    height: 80px;
+  }
+
+  .features-list__item-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop) {
+  
+}

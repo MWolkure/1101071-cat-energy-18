@@ -24,3 +24,25 @@
   width: 24px;
   position: absolute;
 }
+
+@media (min-width: @tablet) {
+  .main-head {
+    display: flex;
+    padding: 24px 30px;
+    border: none;
+  }
+
+  .main-head__logo {
+    width: 173px;
+  }
+
+  .main-head__nav-btn {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop) {
+  .main-head__logo {
+    width: 202px;
+  }
+}

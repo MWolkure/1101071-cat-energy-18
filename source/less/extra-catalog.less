@@ -9,7 +9,6 @@
   font-size: 24px;
   font-weight: 400;
   text-align: left;
-  border-bottom: 1px solid #cdcdcd;
   box-sizing: border-box;
 }
 
@@ -20,3 +19,24 @@ background-color: @color-main;
   height: 3px;
 
   }*/
+
+@media (min-width: @tablet) {
+  .extra-catalog {
+    padding: 71px 30px 69px 30px;
+  }
+
+  .extra-catalog__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .extra-item__wrapper {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop) {
+  .catalog-wrapper {//или целый отдельный лесс-файл делать ради него?
+    display: flex;
+  }
+}

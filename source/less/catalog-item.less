@@ -1,6 +1,5 @@
 .catalog-item {
-  //flex?? или как Img и тайтл с таблицей разместить?
-  //-- да, флекс. в карточке надо добавить обертку для всего, кроме картинки. и флексом картинку налево, всё остальное направо
+  display: flex;
 }
 
 .catalog-item__title-link {
@@ -14,4 +13,25 @@
   line-height: 20px;
   text-transform: uppercase;
   font-weight: 400;
+}
+
+@media (min-width: @tablet) {
+  .catalog-item__wrapper {
+    background-color: @color-add;
+    padding: 40px 38px;
+  }
+
+  .catalog-item__title {
+    font-size: 20px;
+  }
+
+  .catalog-item__btn {
+    width: 249px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .catalog-item__btn {
+    width: 169px;
+  }
 }

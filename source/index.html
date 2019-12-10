@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -15,22 +16,24 @@
     </button>
     <ul class="main-head__nav-list nav-list">
       <li class="nav-list__element">
-        <a href="index.html" class="nav-list__link">Главная</a>
+        <a href="index.html" class="nav-list__link nav-list__link--here">Главная</a>
       </li>
       <li class="nav-list__element">
-        <a href="catalog.html" class="nav-list__link">Каталог продукции</a>
+        <a href="catalog.html" class="nav-list__link nav-list__link--here">Каталог продукции</a>
       </li>
       <li class="nav-list__element">
-        <a href="form.html" class="nav-list__link">Подбор программы</a>
+        <a href="form.html" class="nav-list__link nav-list__link--here">Подбор программы</a>
       </li>
     </ul>
   </header>
   <main>
     <section class="promo">
-      <h1 class="promo__title">Функциональное питание для котов</h1>
-      <p class="promo__text">Занялся собой? займись котом!</p>
+      <div class="promo__wrapper">
+        <h1 class="promo__title">Функциональное питание для котов</h1>
+        <p class="promo__text">Занялся собой? займись котом!</p>
+        <a href="form.html" class="promo__btn-link btn">Подобрать программу</a>
+      </div>
       <img src="img/index-can-mobile@1x.png" alt="" class="promo__img" width="">
-      <a href="form.html" class="promo__btn-link btn">Подобрать программу</a>
     </section>
     <section class="food-program">
       <div class="food-program__item">
@@ -65,22 +68,24 @@
     </section>
     <section class="example">
       <h2 class="example__title">Живой пример</h2>
-      <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-      <div class="example__wrapper">
-        <p class="example__text-border">
-          5 кг
-          <span>снижение веса</span>
-        </p>
-        <p class="example__text-border">
-          60 дней
-          <span>затрачено времени</span>
+      <div class="example__wrapper-desktop">
+        <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+        <div class="example__wrapper">
+          <p class="example__text-border">
+            5 кг
+            <span>снижение веса</span>
+          </p>
+          <p class="example__text-border">
+            60 дней
+            <span>затрачено времени</span>
+          </p>
+        </div>
+        <p class="example__text-money">Затраты на питание: 15 000 руб.</p>
+        <p class="example__text-result">
+          <span class="example__text-result-left">Было</span>
+          <span class="example__text-result-right">Стало</span>
         </p>
       </div>
-      <p class="example__text-money">Затраты на питание: 15 000 руб.</p>
-      <p class="example__text-result">
-        <span class="example__text-result-left">Было</span>
-        <span class="example__text-result-right">Стало</span>
-      </p>
     </section>
   </main>
   <footer class="footer-block">

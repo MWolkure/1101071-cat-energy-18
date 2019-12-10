@@ -1,6 +1,16 @@
 .extra-catalog-list {
   .text;
   list-style: none;
-  padding-left: 20px;
-  padding-right: 20px;
+}
+
+@media (min-width: @tablet) {
+  .extra-catalog-list {
+    border: 1px solid #e6e6e6;
+  }
+}
+
+@media (min-width: @desktop) {
+  .extra-catalog-list {
+    border: none;
+  }
 }
