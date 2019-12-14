@@ -1,6 +1,7 @@
 .example {
   background-color: @color-add;
-  padding: 33px 20px 38px 20px;
+  padding: 25px 20px 38px 20px;
+  box-sizing: border-box;
   position: relative;
 }
 
@@ -9,23 +10,43 @@
   text-align: left;
   font-weight: 400;
   font-size: 36px;
-  line-height: 60px; /*зачем оно вообще? аж 60 ?*/
+  line-height: 60px;
+  width: 280px;
+  margin: 0 auto 20px auto;
+}
+
+.example__wrapper-all {
+  width: 280px;
+  margin: 0 auto;
 }
 
 .example__text {
   .text;
   text-align: left;
   font-family: "arial", sans-serif;
+  margin-bottom: 27px;
 }
 
 .example__text-money {
   .text;
   text-transform: uppercase;
+  margin-bottom: 45px;
+  line-height: 20px;
+}
+
+.example__wrapper-img { //кота добавить бэкграундом или в разметку?
+  height: 240px;
+  margin-bottom: 30px;
+}
+
+.example__text-result {
+  .text;
 }
 
 .example__wrapper {
-  min-width: 124px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 38px;
 }
 
 //блоки в рамке:
@@ -33,6 +54,7 @@
   .text;
   display: inline-block;
   font-size: 24px;
+  line-height: 24px;
   min-width: 124px;
   text-transform: uppercase;
   box-sizing: border-box;
@@ -46,17 +68,18 @@
     font-size: 12px;
     line-height: 12px;
     text-transform: none;
-    transform: translateX(-50%) translateY(-10px);
+    transform: translateX(-50%) translateY(-8px);
     position: absolute;
     top: 100%;
     left: 50%;
     background-color: @color-add;
-    padding: 5px 15px 0 15px;
+    padding: 0 15px;
   }
 }
 
 .example__text-result-left,
 .example__text-result-right {
+  .text;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -106,7 +129,7 @@
 }
 
 @media (min-width: @desktop) {
-  .example__wrapper-desktop {
+  .example__wrapper-all {
     background-color: @color-add;
   }
 

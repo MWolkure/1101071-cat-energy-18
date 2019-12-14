@@ -8,21 +8,23 @@
 </head>
 <body>
   <header class="main-head">
-    <a href="index.html" class="main-head__logo-link">
-      <img src="img/logo-mobile.svg" alt="логотип" class="main-head__logo" width="191">
-    </a>
-    <button type="button" class="main-head__nav-btn">
-      <span class="visually-hidden">Управление меню</span>
-    </button>
+    <div class="main-head__wrapper">
+      <a href="index.html" class="main-head__logo-link">
+        <img src="img/logo-mobile.svg" alt="логотип" class="main-head__logo" width="191">
+      </a>
+      <button type="button" class="main-head__nav-btn">
+        <span class="visually-hidden">Управление меню</span>
+      </button>
+    </div>
     <ul class="main-head__nav-list nav-list">
       <li class="nav-list__element">
-        <a href="index.html" class="nav-list__link">Главная</a>
+        <a href="index.html" class="nav-list__link nav-list__link--here">Главная</a>
       </li>
       <li class="nav-list__element">
-        <a href="catalog.html" class="nav-list__link">Каталог продукции</a>
+        <a href="catalog.html" class="nav-list__link nav-list__link--here">Каталог продукции</a>
       </li>
       <li class="nav-list__element">
-        <a href="form.html" class="nav-list__link">Подбор программы</a>
+        <a href="form.html" class="nav-list__link nav-list__link--here">Подбор программы</a>
       </li>
     </ul>
   </header>
@@ -105,31 +107,34 @@
       <p class="footer-block__text-left">Приглашаем к сотрудничеству дилеров!</p>
       <p class="footer-block__text-right">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
     </section>
-    <div class="footer-block__map-wrap">
-      <img src="img/bg-map-mobile@1x.png" alt="карта" class="footer-block__map" width="320">
-    </div>
-    <div class="footer-block__content footer-content">
-      <a href="index.html" class="footer-content__logo-link">
-        <img src="img/logo-footer.svg" alt="CatEnergy логотип" class="footer-content__logo" width="128">
-      </a>
-      <div class="footer-content__networks networks">
-        <a href="" class="networks__link">
-          <img src="img/icon-vk.svg" alt="ВКонтакте ссылка" class="networks__icon" width="22">
-        </a>
-        <a href="" class="networks__link">
-          <img src="img/icon-insta.svg" alt="Инстаграмм ссылка" class="networks__icon"width="16">
-        </a>
-        <a href="" class="networks__link">
-          <img src="img/icon-fb.svg" alt="Фэйсбук ссылка" class="networks__icon" width="11">
-        </a>
+    <div class="footer-block__wrapper-all">
+      <div class="footer-block__map-wrap">
+        <img src="img/bg-map-mobile@1x.png" alt="карта" class="footer-block__map" width="320">
       </div>
-      <div class="footer-content__dev dev-logo">
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="dev-logo__text">HTML Academy</a>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="dev-logo__logo">
-          <img src="img/htmlacademy.svg" alt="HTML Academy логотип-ссылка" class="dev-logo__img" width="27">
+      <div class="footer-block__content footer-content">
+        <a href="index.html" class="footer-content__logo-link">
+          <img src="img/logo-footer.svg" alt="CatEnergy логотип" class="footer-content__logo" width="128">
         </a>
+        <div class="footer-content__networks networks">
+          <a href="" class="networks__link">
+            <img src="img/icon-vk.svg" alt="ВКонтакте ссылка" class="networks__icon" width="22">
+          </a>
+          <a href="" class="networks__link">
+            <img src="img/icon-insta.svg" alt="Инстаграмм ссылка" class="networks__icon"width="16">
+          </a>
+          <a href="" class="networks__link">
+            <img src="img/icon-fb.svg" alt="Фэйсбук ссылка" class="networks__icon" width="11">
+          </a>
+        </div>
+        <div class="footer-content__dev dev-logo">
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="dev-logo__text">HTML Academy</a>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="dev-logo__logo">
+            <img src="img/htmlacademy.svg" alt="HTML Academy логотип-ссылка" class="dev-logo__img" width="27">
+          </a>
+        </div>
       </div>
     </div>
   </footer>
 </body>
 </html>
+

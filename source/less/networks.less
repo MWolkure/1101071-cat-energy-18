@@ -3,10 +3,18 @@
   justify-content: center;
   border-bottom: 1px solid #d9d9d9;
   box-sizing: border-box;
+  padding: 22px 0;
+  align-content: center; 
 }
 
 .networks__link {
   text-decoration: none;
+}
+
+.networks__link:not(:last-child) {
+  box-sizing: border-box;
+  padding-top: 3px;
+  margin-right: 40px;
 }
 
 @media (min-width: @tablet) {
