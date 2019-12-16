@@ -25,10 +25,10 @@
   width: 40px;
   height: 40px;
   border: none;
-  opacity: 0;
+  background-color: @white;
 }
 
-.main-head__logo-link::after {
+.main-head__nav-btn::after {
   content: url("../img/icon-mobile-menu.svg");
   width: 24px;
   position: absolute;
@@ -45,9 +45,9 @@
 
   .main-head__wrapper {
     .text;
-    margin-left: auto; 
-    //width: 173px; 
-    padding-right: 97px;
+    margin-left: auto;
+    width: 173px;
+    margin-right: auto;
   }
 
   .main-head__logo-link {
@@ -62,7 +62,7 @@
     display: none;
   }
 
-  .main-head__logo-link::after {
+.main-head__nav-btn::after {
     opacity: 0;
   }
 }
@@ -70,7 +70,10 @@
 @media (min-width: @desktop) {
   .main-head {
     padding: 54px 110px;
-    background-image: linear-gradient(to bottom, #64a83b 100%);
+  }
+
+  .main-head--desktop {
+    background-image: linear-gradient(to bottom, #64a83b 0%, #64a83b 100%);
     background-size: 50% 100%;
     background-repeat: no-repeat;
     background-position: right;
