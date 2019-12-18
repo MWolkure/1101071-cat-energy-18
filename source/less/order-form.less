@@ -1,5 +1,5 @@
 .order-form {
-  padding-top: 31px;
+  padding-top: 20px;
   padding-bottom: 35px;
   text-align: left;
   text-transform: uppercase;
@@ -10,8 +10,16 @@
 .order-form__section {
   .text;
   list-style: none;
-  padding-left: 20px;
-  padding-right: 20px;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.order-form__radio-wrapper {
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  width: auto;
+  padding: 25px 20px;
+  margin-bottom: 27px;
 }
 
 .order-form__head {
@@ -20,6 +28,8 @@
   line-height: 60px;
   text-transform: none;
   font-weight: 400;
+  width: 280px;
+  margin: 0 auto 30px auto;
 }
 
 .order-form__title {
@@ -28,11 +38,74 @@
   line-height: 24px;
   text-transform: none;
   font-weight: 400;
+  margin: 0 auto 30px auto;
+  width: 280px;
+}
+
+.order-form__section--info {
+  margin-bottom: 23px;
+
+  .order-form__row {
+    margin-bottom: 14px;
+    display: flex;
+  }
+}
+
+.order-form__section--radio {
+  padding-left: 46px;
+  box-sizing: border-box;
+
+  .order-form__row:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+.order-form__section--contacts {
+  margin-bottom: 28px;
+
+  .order-form__row {
+    margin-bottom: 14px;
+    display: flex;
+  }
+}
+
+.order-form__section--comment {
+  margin-bottom: 28px;
+}
+
+.order-form__section--extra {
+  padding-bottom: 18px;
+
+  .order-form__row {
+    margin-bottom: 25px;
+    padding-left: 46px;
+    box-sizing: border-box;
+  }
+}
+
+.order-form__field-label {
+  max-width: 40%;
+  flex-grow: 1;
+  align-self: center;
+}
+
+.order-form__field {
+  height: 43px;
+  box-sizing: border-box;
+  border: 1px solid #e6e6e6;
+  flex-grow: 1;
+}
+
+//обертка для зеленых полосок
+.order-form__title-wrapper {
+  width: auto;
 }
 
 .order-form__text-before {
   .text;
   font-size: 14px;
+  width: 280px;
+  margin: 0 auto 39px auto;
 }
 
 .order-form__text-after {
@@ -43,11 +116,24 @@
   text-transform: none;
 }
 
+.order-form__btn {
+  margin-bottom: 22px;
+}
+
+.order-form__after-wrapper {
+  width: 280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .order-form__comment {
   font-family: inherit;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  resize: none;
 }
 
 /*зеленые полоски доделать
@@ -55,17 +141,26 @@
   background-color: @color-main;
   height: 3px;
 
-
 иконки в инпутах через
 .order-form__section--contacts::after   ???
 .order-form__section--contacts::before
+*/
 
+.order-form__row {
+  position: relative;
+}
 
-круглая рамка радио
+//круглая рамка радио
 .order-form__radio-label::before {
 	content: "";
-
-  }*/
+  border: 1px solid #cecece;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+  left: -46px;
+  bottom: -7px;
+}
 
 //зеленый круг внутри радио
 .order-form__radio-label::after {
@@ -75,6 +170,28 @@
   height: 12px;
   border-radius: 50%;
   position: absolute;
+  left: -36px;
+  top: 2px;
+}
+
+//квадратная рамка инпут
+.order-form__checkbox-label::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid #cfcfcf;
+  position: absolute;
+  left: 0;
+  top: -6px;
+}
+
+//галочка инпут
+.order-form__checkbox-label::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: -2px;
 }
 
 @media (min-width: @tablet) {

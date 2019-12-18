@@ -85,38 +85,60 @@
 }
 
 @media (min-width: @tablet) {
-  .food-program {
-    padding-right: 30px;
-    padding-left: 30px;
+  .food-program__item {
+    width: 708px;
+    margin: 0 auto;
+    padding: 63px 53px;
+  }
+
+  .food-program__item:first-child {
+    margin-bottom: 30px;
   }
 
   .food-program__text {
     border: none;
     font-size: 16px;
     line-height: 24px;
+    width: 372px;
+    padding-bottom: 30px;
   }
 
   .food-program__btn-link {
     line-height: 20px;
     font-size: 20px;
-  }
-
-  .food-program__title::after {
-    width: 200px;
-    height: 200px;
+    padding-top: 30px;
   }
 
   .food-program__title {
     font-size: 36px;
-    line-height: 37, 02px;
+    line-height: 37px;
+    width: 372px;//не переносится "и" во втором блоке :(
+    padding: 20px 0 0 0; 
+    margin-bottom: 26px;
+  }
+
+  .food-program__title::after { //круг
+    width: 200px;
+    height: 200px;
+    top: 95px;
+    left: 450px;
   }
 
   .food-program__title--slim::before {
     width: 140px;
+    top: 85px;
+    left: 480px;
   }
 
   .food-program__title--fat::before {
     width: 268px;
+    top: 140px;
+    left: 415px;
+  }
+
+  .food-program__btn-link::after {//стрелка
+    bottom: 66px;
+    left: 185px;
   }
 }
 

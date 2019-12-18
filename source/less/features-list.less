@@ -2,8 +2,7 @@
   .text;
   list-style: none;
   width: 280px;
-  margin: 0 auto;
-  margin-bottom: 15px;
+  margin: 0 auto 15px auto;
 }
 
 .features-list__item {
@@ -64,18 +63,35 @@
 
 @media (min-width: @tablet) {
   .features-list {
-    padding-right: 30px;
-    padding-left: 30px;
     display: flex;
+    width: 708px;
+    margin-bottom: 105px;
+    flex-wrap: wrap;
   }
 
-  .features-list__item::before {
+  .features-list__item {
+    width: 354px;
+    padding-right: 30px;
+  }
+
+  .features-list__item::before {//квадрат
     width: 80px;
     height: 80px;
+    top: -100px;
+  }
+
+  .features-list__item--icon-leaf::after,
+  .features-list__item--icon-powder::after,
+  .features-list__item--icon-dining::after,
+  .features-list__item--icon-clock::after {
+    top: -85px;
+    left: 15px;
   }
 
   .features-list__item-text {
     font-size: 16px;
     line-height: 24px;
+    width: 206px;
+    padding: 0;
   }
 }

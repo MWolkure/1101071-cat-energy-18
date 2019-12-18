@@ -31,7 +31,7 @@
   <main>
     <form class="order-form">
       <h1 class="order-form__head">Подбор программы</h1>
-      <p class="order-form__text-before">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      <p class="order-form__text-before">Заполните анкету и мы подберем<br>программу питания для вашего кота</p>
       <div class="order-form__wrapper">
         <ul class="order-form__section order-form__section--info">
           <li class="order-form__row">
@@ -47,22 +47,26 @@
             <input type="text" class="order-form__field" id="age">
           </li>
         </ul>
-        <ul class="order-form__section order-form__section--radio">
-          <li class="order-form__row">
-            <input type="radio" class="visually-hidden" id="slim-inp">
-            <label class="order-form__radio-label" for="slim-inp">Похудение</label>
-          </li>
-          <li class="order-form__row">
-            <input type="radio" class="visually-hidden" id="fat-inp">
-            <label class="order-form__radio-label" for="fat-inp">Набор массы</label>
-          </li>
-          <li class="order-form__row">
-            <input type="radio" class="visually-hidden" id="ask-inp">
-            <label class="order-form__radio-label" for="ask-inp">Не знаю (нужен ваш совет)</label>
-          </li>
-        </ul>
+        <div class="order-form__radio-wrapper">
+          <ul class="order-form__section order-form__section--radio">
+            <li class="order-form__row">
+              <input type="radio" class="visually-hidden" id="slim-inp">
+              <label class="order-form__radio-label" for="slim-inp">Похудение</label>
+            </li>
+            <li class="order-form__row">
+              <input type="radio" class="visually-hidden" id="fat-inp">
+              <label class="order-form__radio-label" for="fat-inp">Набор массы</label>
+            </li>
+            <li class="order-form__row">
+              <input type="radio" class="visually-hidden" id="ask-inp">
+              <label class="order-form__radio-label" for="ask-inp">Не знаю (нужен ваш совет)</label>
+            </li>
+          </ul>
+        </div>
       </div>
-      <h2 class="order-form__title">Контактные данные (владельца кота)</h2>
+      <div class="order-form__title-wrapper">
+        <h2 class="order-form__title">Контактные данные (владельца кота)</h2>
+      </div>
       <ul class="order-form__section order-form__section--contacts">
         <li class="order-form__row">
           <label class="order-form__field-label" for="mail-inp">E-mail:*</label>
@@ -74,10 +78,14 @@
         </li>
       </ul>
       <div class="order-form__section order-form__section--comment">
-        <h2 class="order-form__title">Комментарий</h2>
-        <textarea class="order-form__comment" rows="3" cols="33">Расскажите обо всех повадках кота</textarea>
+        <div class="order-form__title-wrapper">
+          <h2 class="order-form__title">Комментарий</h2>
+        </div>
+        <textarea class="order-form__comment" rows="8" cols="43">Расскажите обо всех повадках кота</textarea>
       </div>
-      <h2 class="order-form__title">Дополнительно</h2>
+      <div class="order-form__title-wrapper">
+        <h2 class="order-form__title">Дополнительно</h2>
+      </div>
       <ul class="order-form__section order-form__section--extra">
         <li class="order-form__row">
           <input type="checkbox" class="visually-hidden" id="ch-box-1">
@@ -98,7 +106,7 @@
       </ul>
       <div class="order-form__after-wrapper">
         <a href="" class="order-form__btn btn">Отправить заявку</a>
-        <p class="order-form__text-after">* - Обязательные поля</p>
+        <p class="order-form__text-after">* — Обязательные поля</p>
       </div>
     </form>
   </main>
