@@ -87,18 +87,28 @@
 
 @media (min-width: @tablet) {
   .example {
+    .text;
     border-top: 1px solid #e6e6e6;
     box-sizing: border-box;
-    padding: 52px 30px 68px 30px;
+    padding-top: 52px;
+    padding-bottom: 68px;
     background-color: @white;
   }
 
   .example__title {
     font-size: 60px;
+    width: 708px;
+    margin: 0 auto 72px auto;
+  }
+
+  .example__wrapper-all {
+    width: 708px;
+    margin: 0 auto;
   }
 
   .example__text {
     line-height: 24px;
+    width: 700px;
   }
 
   .example__text-money {
@@ -117,6 +127,12 @@
     }
   }
 
+  .example__wrapper-img {
+    background-color: @color-add;
+    margin: 0; //поэтому нужно добавить кота либо в разметку,
+    //либо еще одну обертку делать для него
+  }
+
   .example__text-result-left,
   .example__text-result-right {
     font-size: 20px;
@@ -125,6 +141,7 @@
 
   .example__text-result {
     background-color: @color-add;
+    padding-bottom: 60px;
   }
 }
 

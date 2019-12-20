@@ -3,10 +3,10 @@
   list-style: none;
   width: 280px;
   margin: 0 auto 15px auto;
+  position: relative;
 }
 
 .features-list__item {
-  position: relative;
 
   &::before { /*зеленый квадрат*/
     content: "";
@@ -29,33 +29,41 @@
   box-sizing: border-box;
 }
 
-.features-list__item--icon-leaf::after {
-  content: url("../img/advantage-leaf@1x.png");
+.features-list__item--icon-leaf {
+  background-image: url("../img/advantage-leaf@1x.png");
+  background-repeat: no-repeat;
   width: 26px;
+  height: 35px;
   position: absolute;
   top: 5px;
   left: 7px;
 }
 
-.features-list__item--icon-powder::after {
-  content: url("../img/advantage-powder@1x.png");
+.features-list__item--icon-powder {
+  background-image: url("../img/advantage-powder@1x.png");
+  background-repeat: no-repeat;
   width: 29px;
+  height: 35px;
   position: absolute;
   top: 5px;
   left: 7px;
 }
 
-.features-list__item--icon-dining::after {
-  content: url("../img/advantage-dining@1x.png");
+.features-list__item--icon-dining {
+  background-image: url("../img/advantage-dining@1x.png");
+  background-repeat: no-repeat;
   width: 23px;
+  height: 35px;
   position: absolute;
   top: 5px;
   left: 6px;
 }
 
-.features-list__item--icon-clock::after {
-  content: url("../img/advantage-clock@1x.png");
+.features-list__item--icon-clock {
+  background-image: url("../img/advantage-clock@1x.png");
+  background-repeat: no-repeat;
   width: 26px;
+  height: 35px;
   position: absolute;
   top: 5px;
   left: 6px;
@@ -67,31 +75,42 @@
     width: 708px;
     margin-bottom: 105px;
     flex-wrap: wrap;
+    counter-reset: features-list__item;
   }
 
   .features-list__item {
-    width: 354px;
-    padding-right: 30px;
+    width: 50%;
+    padding: 135px 30px 110px 0;
+    box-sizing: border-box;
   }
 
   .features-list__item::before {//квадрат
     width: 80px;
     height: 80px;
-    top: -100px;
+    top: 22px;
   }
 
-  .features-list__item--icon-leaf::after,
-  .features-list__item--icon-powder::after,
-  .features-list__item--icon-dining::after,
-  .features-list__item--icon-clock::after {
-    top: -85px;
+  .features-list__item--icon-leaf,
+  .features-list__item--icon-powder,
+  .features-list__item--icon-dining,
+  .features-list__item--icon-clock {
+    top: 37px;
     left: 15px;
+  }
+
+  .features-list__item::after {
+    content: "";
+    counter-increment: features-list__item 1;
+    font-size: 230px;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 
   .features-list__item-text {
     font-size: 16px;
     line-height: 24px;
-    width: 206px;
+    width: 245px;
     padding: 0;
   }
 }
