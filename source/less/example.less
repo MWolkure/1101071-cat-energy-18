@@ -36,6 +36,7 @@
 
 .example__wrapper-img { //кота добавить бэкграундом или в разметку?
   height: 240px;
+  width: auto;
   margin-bottom: 30px;
 }
 
@@ -90,47 +91,77 @@
     .text;
     border-top: 1px solid #e6e6e6;
     box-sizing: border-box;
-    padding-top: 52px;
-    padding-bottom: 68px;
+    padding-top: 45px;
     background-color: @white;
   }
 
   .example__title {
     font-size: 60px;
     width: 708px;
-    margin: 0 auto 72px auto;
+    margin: 0 auto 65px auto;
   }
 
   .example__wrapper-all {
     width: 708px;
-    margin: 0 auto;
+    margin: 0 auto 250px auto;
   }
 
   .example__text {
     line-height: 24px;
     width: 700px;
+    margin-bottom: 57px;
   }
 
-  .example__text-money {
-    font-size: 20px;
-    line-height: 20px;
+  .example__wrapper-layout {
+    display: flex;
+  }
+
+  .example__wrapper {
+    flex-grow: 1;
+    margin: 0;
+    justify-content: left;
   }
 
   .example__text-border {
     font-size: 30px;
-    line-height: 37, 02px;
+    line-height: 37px;
+    min-width: 162px;
 
     span {
       font-size: 14px;
       line-height: 14px;
       background-color: @white;
+      width: 127px;
+      padding: 0 8px;
     }
+  }
+
+.example__text-border:first-child {
+  margin-right: 42px;
+
+  span {
+    width: 100px;
+  }
+}
+
+  .example__wrapper-text {
+    flex-grow: 1;
+    text-align: right;
+    padding-top: 13px;
+  }
+
+  .example__text-money {
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0 0 0 auto;
+    width: 180px;
   }
 
   .example__wrapper-img {
     background-color: @color-add;
     margin: 0; //поэтому нужно добавить кота либо в разметку,
     //либо еще одну обертку делать для него
+    height: 370px;
   }
 
   .example__text-result-left,
@@ -146,13 +177,75 @@
 }
 
 @media (min-width: @desktop) {
+  .example {
+    border: none;
+    padding-top: 0;
+    background-color: @color-add;
+  }
+
+  .example__title {
+    width: 1220px;
+    margin-bottom: 0;
+    padding-bottom: 76px;
+  }
+
+  .example__title-wrapper {
+    background-color: @white;
+  }
+
+  .example__wrapper {
+    margin-bottom: 60px;
+  }
+
   .example__wrapper-all {
     background-color: @color-add;
+    width: 1220px;
+    padding: 76px 40px;
+    margin: 0 auto;
+  }
+
+  .example__text {
+    width: 434px;
+    margin-bottom: 72px;
+  }
+
+  .example__wrapper-layout {
+    width: 434px;
+    display: block;
+  }
+
+  .example__wrapper-text {
+    text-align: left;
+    padding: 0;
+  }
+
+  .example__text-money {
+    width: 100%;
+
+    span {
+      padding-left: 66px;
+    }
   }
 
   .example__text-border {
     span {
       background-color: @color-add;
     }
+  }
+
+  .example__wrapper-img {
+    width: 610px;
+    height: 200px; //заменить на авто ,когда будет картинка
+    position: absolute;
+    top: 136px;
+    right: 0;
+  }
+
+  .example__text-result {
+    padding-bottom: 0;
+    width: 610px;
+    position: absolute;
+    right: 0;
+    bottom: 76px;
   }
 }

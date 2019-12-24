@@ -9,16 +9,26 @@
 
 .networks__link {
   text-decoration: none;
+  align-self: center;
 }
 
 .networks__link:not(:last-child) {
   box-sizing: border-box;
-  padding-top: 3px;
   margin-right: 40px;
+}
+
+.networks__link:first-child {
+  padding-bottom: 3px;
 }
 
 @media (min-width: @tablet) {
   .networks {
     border: none;
+    padding: 0;
+    margin-left: auto;
+  }
+
+  .networks__link:not(:last-child) {
+    margin-right: 29px;
   }
 }

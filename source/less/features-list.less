@@ -7,16 +7,7 @@
 }
 
 .features-list__item {
-
-  &::before { /*зеленый квадрат*/
-    content: "";
-    background-color: @color-main;
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+  position: relative;
 }
 
 .features-list__item-text {
@@ -29,59 +20,64 @@
   box-sizing: border-box;
 }
 
-.features-list__item--icon-leaf {
+.features-list__item::before { /*зеленый квадрат*/ 
+  content: "";
+  background-color: @color-main;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: 46px auto;
+  background-position: center;
+}
+
+.features-list__item--icon-leaf::before {
   background-image: url("../img/advantage-leaf@1x.png");
-  background-repeat: no-repeat;
-  width: 26px;
-  height: 35px;
-  position: absolute;
-  top: 5px;
-  left: 7px;
 }
 
-.features-list__item--icon-powder {
+.features-list__item--icon-powder::before {
   background-image: url("../img/advantage-powder@1x.png");
-  background-repeat: no-repeat;
-  width: 29px;
-  height: 35px;
-  position: absolute;
-  top: 5px;
-  left: 7px;
 }
 
-.features-list__item--icon-dining {
+.features-list__item--icon-dining::before {
   background-image: url("../img/advantage-dining@1x.png");
-  background-repeat: no-repeat;
-  width: 23px;
-  height: 35px;
-  position: absolute;
-  top: 5px;
-  left: 6px;
 }
 
-.features-list__item--icon-clock {
+.features-list__item--icon-clock::before {
   background-image: url("../img/advantage-clock@1x.png");
-  background-repeat: no-repeat;
-  width: 26px;
-  height: 35px;
-  position: absolute;
-  top: 5px;
-  left: 6px;
 }
 
 @media (min-width: @tablet) {
   .features-list {
     display: flex;
     width: 708px;
-    margin-bottom: 105px;
     flex-wrap: wrap;
-    counter-reset: features-list__item;
+    margin-bottom: 0;
+    counter-reset: li;
+
+    li::after {
+      content: counter(li);
+      counter-increment: li;
+      font-size: 281px;
+      line-height: 281px;
+      color: #f2f2f2;
+      position: absolute;
+      left: 118px;
+      top: -15px;
+      z-index: 1; 
+    }
   }
 
   .features-list__item {
-    width: 50%;
-    padding: 135px 30px 110px 0;
+    width: 325px;
+    padding: 135px 0 109px 0;
     box-sizing: border-box;
+  }
+
+  .features-list__item:nth-child(odd) {
+    margin-right: 58px;
   }
 
   .features-list__item::before {//квадрат
@@ -90,27 +86,31 @@
     top: 22px;
   }
 
-  .features-list__item--icon-leaf,
-  .features-list__item--icon-powder,
-  .features-list__item--icon-dining,
-  .features-list__item--icon-clock {
-    top: 37px;
-    left: 15px;
-  }
-
-  .features-list__item::after {
-    content: "";
-    counter-increment: features-list__item 1;
-    font-size: 230px;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
   .features-list__item-text {
     font-size: 16px;
     line-height: 24px;
     width: 245px;
     padding: 0;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@media (min-width: @desktop) {
+  .features-list {
+    width: 1220px;
+    flex-wrap: nowrap;
+  }
+
+  .features-list__item {
+    width: 245px;
+  }
+
+  .features-list__item:nth-child(odd) {
+    margin-right: 80px;
+  }
+
+  .features-list__item:not(:last-child) {//сомневаюсь, что это правильно, но по-другому не придумалось
+    margin-right: 80px;
   }
 }

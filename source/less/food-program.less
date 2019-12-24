@@ -143,9 +143,33 @@
 }
 
 @media (min-width: @desktop) {
-  .food-program {
-    display: flex;
+  .food-program__item-wrap {
+    display: inline-flex;
   }
+
+  .food-program__item:first-child {
+    margin-right: 80px;
+    margin-bottom: 0;
+  }
+
+  .food-program__item {
+    width: 570px;
+  }
+
+  .food-program__title {
+    margin-bottom: 77px;
+    text-align: right;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .food-program__title--slim {
+    padding-right: 141px;
+  }
+
+   .food-program__title--fat {
+    padding-right: 100px;
+   }
 
   .food-program__title::after {
     width: 100px;
@@ -154,9 +178,32 @@
 
   .food-program__title--slim::before {
     width: 70px;
+    top: 45px;
+    left: 70px;
   }
 
   .food-program__title--fat::before {
     width: 134px;
+    top: 75px;
+    left: 38px;
+  }
+
+  .food-program__title--slim::after {
+    top: 50px;
+    left: 53px;
+  }
+
+  .food-program__title--fat::after {
+    top: 50px;
+    left: 53px;
+  }
+
+  .food-program__text {
+    width: 463px;
+    padding-bottom: 36px;
+  }
+
+  .food-program__btn-link {
+    padding: 0;
   }
 }

@@ -14,14 +14,21 @@
 
 @media (min-width: @tablet) {
   .footer-content {
-    box-sizing: border-box;
-    padding-bottom: 57px;
-    padding-left: 30px;
-    padding-right: 30px;
     display: flex;
+    align-items: center;
+    width: 708px;
+    padding: 58px 0; //высота 150px всего
+    box-sizing: border-box;
   }
 
   .footer-content__logo-link {
     border: none;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop) {
+  .footer-content {
+    width: 1220px;
   }
 }

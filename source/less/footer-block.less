@@ -45,15 +45,42 @@
 @media (min-width: @tablet) {
   .footer-block__address {
     background-color: @white;
+    width: 708px;
+    padding: 60px 42px;
   }
 
   .footer-block__text-left {
     font-size: 20px;
     line-height: 25px;
+    width: 151px;
   }
 
   .footer-block__text-right {
     font-size: 16px;
     line-height: 20px;
+    width: 155px;
+    margin-left: auto;
+    text-align: right; // и как этот чёртов пробел сделать перед "Санкт-Петербург"??
+  }
+
+  .footer-block__map-wrap {
+    min-width: 768px;
+  }  
+}
+
+@media (min-width: @desktop) {
+  .footer-block {
+    position: relative;
+  }
+
+  .footer-block__address {
+    width: 570px;
+    position: absolute;
+    top: 96px;
+    left: 7%;
+  }
+
+  .footer-block__map-wrap {
+    width: 100%;
   }
 }

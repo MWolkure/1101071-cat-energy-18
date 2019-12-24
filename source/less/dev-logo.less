@@ -10,9 +10,25 @@
   font-size: 16px;
   line-height: 16px;
   color: #666666;
+  padding-top: 5px;
 }
 
 .dev-logo__logo {
   text-decoration: none;
   margin-left: auto;
+}
+
+@media (min-width: @tablet) {
+  .dev-logo {
+    padding: 0;
+    margin-left: auto;
+  }
+
+  .dev-logo__logo {
+    padding-left: 23px;
+  }
+
+  .dev-logo__text {
+    padding-top: 8px;
+  }
 }
