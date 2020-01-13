@@ -1,6 +1,8 @@
 .more-items {
   position: relative;
   text-align: center;
+  width: 280px;
+  margin: 0 auto;
 }
 
 .more-items__text {
@@ -9,6 +11,7 @@
   font-size: 12px;
   line-height: 16px;
   color: #444444;
+  margin-bottom: 22px;
 }
 
 .more-items__title {
@@ -17,15 +20,63 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
+  margin-bottom: 11px;
 }
 
 .more-items__title::before {
   content: url("../img/icon-plus-mobile.svg");
   width: 30px;
   position: absolute;
+  top: -50px;
+  left: 125px;
 }
 
 .more-items__btn {
   background-color: @color-add;
   color: #444444;
+}
+
+@media (min-width: @tablet) {
+  .more-items {
+    width: 322px; /*потому что бордер для  .catalog-list__show-all
+    почему-то игнорит box-sizing: border-box;*/
+  }
+
+  .more-items__title {
+    font-size: 20px;
+    width: 135px;
+    margin: 0 auto 30px auto;
+  }
+
+  .more-items__title::before {
+    content: url("../img/icon-plus.svg");
+    width: 60px;
+    position: absolute;
+    top: -110px;
+    left: 132px;
+  }
+
+  .more-items__text {
+    font-size: 16px;
+    width: 168px;
+    margin: 0 auto 95px auto;
+  }
+
+  .more-items__btn {
+    width: 249px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .more-items {
+    width: 243px; // то же самое из-за бордера, на 2 рх меньше чем надо
+  }
+
+  .more-items__btn {
+    width: 169px;
+  }
+
+  .more-items__title::before {
+    left: 95px;
+  }
 }

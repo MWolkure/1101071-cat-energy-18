@@ -1,11 +1,36 @@
 .footer-content {
   padding-bottom: 22px;
-  padding-left: 20px;
-  padding-right: 20px;
+  width: 280px;
+  margin: 0 auto;
 }
 
 .footer-content__logo-link {
   text-decoration: none;
   border-bottom: 1px solid #d9d9d9;
   box-sizing: border-box;
+  display: block;
+  padding: 32px 0;
+}
+
+@media (min-width: @tablet) {
+  .footer-content {
+    display: flex;
+    align-items: center;
+    width: 708px;
+    padding: 58px 0; //высота 150px всего
+    box-sizing: border-box;
+  }
+
+  .footer-content__logo-link {
+    border: none;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop) {
+  .footer-content {
+    width: 1300px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
