@@ -30,13 +30,25 @@
 }
 
 @media (min-width: @tablet) {
+  .catalog-item {
+    width: 324px;
+  }
+
+  .catalog-item__link {
+    top: -50px;
+    left: 90px;
+  }
+
   .catalog-item__wrapper {
     background-color: @color-add;
-    padding: 40px 38px;
+    padding: 165px 38px 40px 38px;
   }
 
   .catalog-item__title {
     font-size: 20px;
+    width: 126px;
+    margin: 0 auto 26px auto;
+    text-align: center;
   }
 
   .catalog-item__btn {
@@ -45,7 +57,15 @@
 }
 
 @media (min-width: @desktop) {
+  .catalog-item {
+    width: 245px;
+  }
+
   .catalog-item__btn {
     width: 169px;
+  }
+
+  .catalog-item__link {
+    left: 55px;
   }
 }

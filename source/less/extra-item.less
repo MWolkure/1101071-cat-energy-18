@@ -35,18 +35,26 @@
 
 @media (min-width: @tablet) {
   .extra-item {
-    border-bottom: 1px solid #e6e6e6;
     padding: 28px 38px;
+  }
+
+  .extra-item__wrapper {
+    display: flex;
   }
 
   .extra-item__title {
     font-size: 20px;
     line-height: 20px;
+    margin-right: auto;
   }
 
   .extra-item__feature,
   .extra-item__feature-value {
     line-height: 16px;
+  }
+
+  .extra-item__feature {
+    padding-right: 52px;
   }
 
   .extra-item__btn {
@@ -56,16 +64,37 @@
 
 @media (min-width: @desktop) {
   .extra-item {
-    border-bottom: 1px solid #cdcdcd; //не забыть сделать одну верхнюю рамку первому итему
-    box-sizing: border-box;
     display: flex;
+    padding: 15px 0;
+    justify-content: space-between;
   }
 
   .extra-item__wrapper {
-    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  .extra-item__title {
+    width: 245px;
+    margin-right: 80px;
+    margin-bottom: 0;
+  }
+
+  .extra-item__text-wrapper {
+    margin-bottom: 0;
+  }
+
+  .extra-item__feature {
+    padding: 0;
+    width: 245px;
+  }
+
+  .extra-item__feature-value {
+    text-align: left;
   }
 
   .extra-item__btn {
     width: 245px;
+    margin-left: 40px;
   }
 }

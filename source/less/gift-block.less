@@ -15,15 +15,47 @@
   line-height: 20px;
   color: @white;
   text-align: center;
-  width: 159px;
+  width: 161px;
   margin: 0 auto;
 }
 
-.gift-block__text::before {
-  content: url("../img/icon-gift.svg");
+.gift-block svg {
   width: 55px;
   height: 60px;
   position: absolute;
   top: 65px;
   left: 115px;
+  fill: @white;
+}
+
+@media (min-width: @tablet) {
+  .gift-block {
+    width: 708px;
+    padding: 70px 0;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    margin-bottom: 76px;
+  }
+
+  .gift-block__text {
+    text-align: left;
+    margin-left: 424px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .gift-block {
+    .text;
+    margin-left: 80px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    width: 245px;
+  }
+
+  .gift-block__text {
+    margin: 188px auto 0 auto;
+    text-align: center;
+  }
+
+  .gift-block__text::before {
+    left: 100px;
+  }
 }

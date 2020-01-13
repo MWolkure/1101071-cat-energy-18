@@ -38,16 +38,45 @@
 
 @media (min-width: @tablet) {
   .more-items {
-    border: 1px solid #e6e6e6;
-    box-sizing: border-box;
-    padding-bottom: 40px;
+    width: 322px; /*потому что бордер для  .catalog-list__show-all
+    почему-то игнорит box-sizing: border-box;*/
   }
 
   .more-items__title {
     font-size: 20px;
+    width: 135px;
+    margin: 0 auto 30px auto;
+  }
+
+  .more-items__title::before {
+    content: url("../img/icon-plus.svg");
+    width: 60px;
+    position: absolute;
+    top: -110px;
+    left: 132px;
+  }
+
+  .more-items__text {
+    font-size: 16px;
+    width: 168px;
+    margin: 0 auto 95px auto;
   }
 
   .more-items__btn {
     width: 249px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .more-items {
+    width: 243px; // то же самое из-за бордера, на 2 рх меньше чем надо
+  }
+
+  .more-items__btn {
+    width: 169px;
+  }
+
+  .more-items__title::before {
+    left: 95px;
   }
 }

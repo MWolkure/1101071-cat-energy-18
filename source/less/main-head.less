@@ -38,16 +38,19 @@
 
 @media (min-width: @tablet) {
   .main-head {
-    display: flex;
     text-align: center;
-    padding: 24px 30px;
+    padding: 24px 0;
+  }
+
+  .main-head__wrapper-all {
+    display: flex;
+    margin: 0 auto;
+    width: 708px;
   }
 
   .main-head__wrapper {
     .text;
-    margin-left: auto;
-    width: 173px;
-    margin-right: auto;
+    width: 192px;
   }
 
   .main-head__logo-link {
@@ -69,7 +72,14 @@
 
 @media (min-width: @desktop) {
   .main-head {
-    padding: 54px 110px;
+    padding: 54px 0;
+  }
+
+  .main-head__wrapper-all {
+    width: 1300px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
   }
 
   .main-head--index {

@@ -2,7 +2,7 @@
   background-color: @color-add;
 }
 
-.footer-block--main {
+.footer-block__address-wrapper--main {
   background-color: @white;
 }
 
@@ -19,8 +19,18 @@
 }
 
 .footer-block__map-wrap {
-  margin: 0 auto;
-  width: 320px;
+  min-width: 320px;
+  height: 362px;
+  position: relative;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .footer-block__text-left {
@@ -44,7 +54,6 @@
 
 @media (min-width: @tablet) {
   .footer-block__address {
-    background-color: @white;
     width: 708px;
     padding: 60px 42px;
   }
@@ -60,11 +69,11 @@
     line-height: 20px;
     width: 155px;
     margin-left: auto;
-    text-align: right; // и как этот чёртов пробел сделать перед "Санкт-Петербург"??
+    text-align: right; // и как этот чёртов пробел сделать перед "Санкт-Петербург"??спаном пустым?
   }
 
   .footer-block__map-wrap {
-    min-width: 768px;
+    min-width: 708px;
   }  
 }
 
@@ -78,6 +87,8 @@
     position: absolute;
     top: 96px;
     left: 7%;
+    z-index: 2;
+    background-color: @white;
   }
 
   .footer-block__map-wrap {

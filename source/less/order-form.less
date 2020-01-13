@@ -45,9 +45,13 @@
 .order-form__section--info {
   margin-bottom: 23px;
 
-  .order-form__row {
-    margin-bottom: 14px;
+  li {
+    margin-bottom: 20px;
     display: flex;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -55,7 +59,7 @@
   padding-left: 46px;
   box-sizing: border-box;
 
-  .order-form__row:not(:last-child) {
+  li:not(:last-child) {
     margin-bottom: 25px;
   }
 }
@@ -63,7 +67,7 @@
 .order-form__section--contacts {
   margin-bottom: 28px;
 
-  .order-form__row {
+  li {
     margin-bottom: 14px;
     display: flex;
   }
@@ -76,7 +80,7 @@
 .order-form__section--extra {
   padding-bottom: 18px;
 
-  .order-form__row {
+  li {
     margin-bottom: 25px;
     padding-left: 46px;
     box-sizing: border-box;
@@ -84,19 +88,31 @@
 }
 
 .order-form__field-label {
-  max-width: 40%;
-  flex-grow: 1;
+  padding-right: 15px;
   align-self: center;
 }
 
 .order-form__field {
-  height: 43px;
+  height: 45px;
   box-sizing: border-box;
   border: 1px solid #e6e6e6;
   flex-grow: 1;
 }
 
-//обертка для зеленых полосок
+.order-form__icon-mail {
+  width: 17px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.order-form__icon-phone {
+  width: 20px;
+  position: absolute;
+  top: 15px;
+  right: 12px;
+}
+
 .order-form__title-wrapper {
   width: auto;
 }
@@ -134,17 +150,9 @@
   border: 1px solid #e6e6e6;
   box-sizing: border-box;
   resize: none;
+  width: 100%;
+  padding: 15px 15px;
 }
-
-/*зеленые полоски доделать
-
-  background-color: @color-main;
-  height: 3px;
-
-иконки в инпутах через
-.order-form__section--contacts::after   ???
-.order-form__section--contacts::before
-*/
 
 .order-form__row {
   position: relative;
@@ -159,7 +167,7 @@
   border-radius: 50%;
   position: absolute;
   left: -46px;
-  bottom: -7px;
+  bottom: -6px;
 }
 
 //зеленый круг внутри радио
@@ -189,9 +197,14 @@
 //галочка инпут
 .order-form__checkbox-label::after {
   content: "";
+  width: 10px;
+  height: 17px;
+  border: 2px solid @color-main;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
   position: absolute;
   left: 10px;
-  top: -2px;
+  top: -5px;
 }
 
 @media (min-width: @tablet) {
@@ -202,51 +215,222 @@
     padding-bottom: 72px;
   }
 
-  .order-form__section {
-    padding-left: 30px;
-    padding-right: 30px;
+  .order-form__head {
+    width: 708px;
+    margin-bottom: 55px;
+    font-size: 60px;
   }
 
-  .order-form__section--extra {
-    display: flex; //здесь флекс, не менять его!
+  .order-form__section {
+    padding: 0 35px 0 40px;
+    width: 708px;
+    box-sizing: border-box;
+  }
+
+  .order-form__field {
+    height: 52px;
+  }
+
+  .order-form__icon-phone{
+    top: 16px;
+    right: 16px;
+  }
+
+  .order-form__icon-mail {
+    top: 19px;
+    right: 20px;
+  }
+
+  .order-form__section--info {
+    margin-bottom: 70px;
+  }
+
+  .order-form__radio-wrapper {
+    width: 708px;
+    margin: 0 auto 75px auto;
+    padding: 0 35px 0 40px;
+    border: none;
   }
 
   .order-form__section--radio {
+    padding: 34px 0 34px 87px;
     border: 1px solid #e6e6e6;
-    box-sizing: border-box;
-    padding: 36px 88px;
+    width: 100%;
+
+    li:not(:last-child) {
+      margin-bottom: 34px;
+    }
   }
 
-  .order-form__head {
-    font-size: 60px;
+  .order-form__radio-label::after {
+    top: 4px;
+  }
+
+  .order-form__section--contacts {
+    margin-bottom: 67px;
+
+    li {
+      margin-bottom: 20px;
+    }
+  }
+
+  .order-form__section--comment {
+    margin-bottom: 67px;
+  }
+
+  .order-form__section--extra {
+    display: flex;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+
+    li {
+      padding-left: 58px;
+      margin-bottom: 55px;
+      width: 285px;/*??? как только ставишь ширину положенную,
+      324, то перенос не работает,в чём дело??*/
+      box-sizing: border-box;
+    }
+
+    li:nth-child(odd) {
+      margin-right: 30px;
+    }
+
+    li:nth-child(even) {
+      margin-left: 30px;
+    }
+  }
+//квадрат
+  .order-form__checkbox-label::before {
+    width: 40px;
+    height: 40px;
+    top: -9px;
+  }
+//галочка
+  .order-form__checkbox-label::after {
+    left: 15px;
+    top: -2px;
   }
 
   .order-form__title {
     font-size: 36px;
     line-height: 36px;
+    width: 708px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    margin-bottom: 75px;
   }
 
   .order-form__text-before {
     font-size: 20px;
     line-height: 30px;
+    width: 708px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    margin-bottom: 70px;
   }
 
   .order-form__text-after {
     font-size: 16px;
     line-height: 16px;
+    margin-left: 60px;
+    padding-top: 13px;
+    box-sizing: border-box;
   }
 
   .order-form__after-wrapper {
     display: flex;
+    width: 708px;
+    padding-left: 40px;
+    box-sizing: border-box;
   }
 }
 
 @media (min-width: @desktop) {
+  .order-form {
+    padding-top: 0;
+    padding-bottom: 82px;
+  }
+
+  .order-form__head {
+    width: 1300px;
+    padding-left: 40px;
+    box-sizing: border-box;
+  }
+
+  .order-form__title {
+    width: 1300px;
+  }
+
+  .order-form__text-before {
+    width: 1300px;
+  }
+
   .order-form__wrapper {
     display: flex;
+    margin: 0 auto;
+    width: 1300px;
+  }
+
+  .order-form__section--info {
+    padding: 0 40px;
+    width: 100%;
+  }
+
+  .order-form__radio-wrapper {
+    padding: 0 40px;
+    width: 100%;
   }
 
   .order-form__section--contacts {
     display: flex;
+    width: 1300px;
+    padding: 0;
+
+    li {
+      margin-bottom: 0;
+      width: 570px;
+      padding: 0 40px;
+    }
+  }
+
+  .order-form__section--comment {
+    padding: 0 40px;
+    width: 1300px;
+  }
+
+  .order-form__section--extra {
+    width: 1300px;
+    padding: 0;
+    margin-bottom: 61px;
+
+    li:nth-child(odd) {
+      margin: 0 40px;
+    }
+
+    li:nth-child(even) {
+      margin: 0 40px;
+    }
+
+    li {
+      width: 245px;
+    }
+  }
+
+  .order-form__after-wrapper {
+    width: 1300px;
+    padding: 0;
+  }
+
+  .order-form__btn {
+    width: 570px;
+    margin: 0 40px;
+    box-sizing: border-box;
+  }
+
+  .order-form__text-after {
+    text-align: left;
+    width: 570px;
+    margin: 0 40px;
+    box-sizing: border-box;
   }
 }

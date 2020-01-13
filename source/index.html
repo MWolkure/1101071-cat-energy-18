@@ -8,25 +8,27 @@
 </head>
 <body>
   <header class="main-head main-head--index">
-    <div class="main-head__wrapper">
-      <a href="index.html" class="main-head__logo-link">
-        <img src="img/logo-mobile.svg" alt="логотип" class="main-head__logo" width="191">
-      </a>
-      <button type="button" class="main-head__nav-btn">
-        <span class="visually-hidden">Управление меню</span>
-      </button>
+    <div class="main-head__wrapper-all">
+      <div class="main-head__wrapper">
+        <a href="index.html" class="main-head__logo-link">
+          <img src="img/logo-mobile.svg" alt="логотип" class="main-head__logo" width="191">
+        </a>
+        <button type="button" class="main-head__nav-btn">
+          <span class="visually-hidden">Управление меню</span>
+        </button>
+      </div>
+      <ul class="main-head__nav-list nav-list">
+        <li class="nav-list__element">
+          <a href="index.html" class="nav-list__link nav-list__link--index">Главная</a>
+        </li>
+        <li class="nav-list__element">
+          <a href="catalog.html" class="nav-list__link nav-list__link--index">Каталог продукции</a>
+        </li>
+        <li class="nav-list__element">
+          <a href="form.html" class="nav-list__link nav-list__link--index">Подбор программы</a>
+        </li>
+      </ul>
     </div>
-    <ul class="main-head__nav-list nav-list">
-      <li class="nav-list__element">
-        <a href="index.html" class="nav-list__link nav-list__link--index">Главная</a>
-      </li>
-      <li class="nav-list__element">
-        <a href="catalog.html" class="nav-list__link nav-list__link--index">Каталог продукции</a>
-      </li>
-      <li class="nav-list__element">
-        <a href="form.html" class="nav-list__link nav-list__link--index">Подбор программы</a>
-      </li>
-    </ul>
   </header>
   <main>
     <section class="promo">
@@ -94,22 +96,30 @@
           </div>
         </div>
       </div>
-      <div class="example__wrapper-img">
+      <div class="example__slider">
+        <div class="example__img-block">
+          <img src="img/before-mobile@1x.png" class="example__img-before">
+          <img src="img/after-mobile@1x.png" class="example__img-after">
+        </div>
+        <div class="example__text-result">
+          <span class="example__text-result-left">Было</span>
+          <span class="example__range"></span>
+          <span class="example__switch"></span>
+          <span class="example__text-result-right">Стало</span>
+        </div>
       </div>
-      <p class="example__text-result">
-        <span class="example__text-result-left">Было</span>
-        <span class="example__text-result-right">Стало</span>
-      </p>
     </section>
   </main>
-  <footer class="footer-block footer-block--main">
-    <section class="footer-block__address">
-      <p class="footer-block__text-left">Приглашаем к сотрудничеству дилеров!</p>
-      <p class="footer-block__text-right">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-    </section>
+  <footer class="footer-block">
+    <div class="footer-block__address-wrapper footer-block__address-wrapper--main">
+      <section class="footer-block__address">
+        <p class="footer-block__text-left">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="footer-block__text-right">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      </section>
+    </div>
     <div class="footer-block__wrapper-all">
       <div class="footer-block__map-wrap">
-        <img src="img/bg-map-mobile@1x.png" alt="карта" class="footer-block__map" width="320">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5978266653062!2d30.321297716096982!3d59.93881538187623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310e354288bb%3A0xbbeecda9980bbc58!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE4LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1577271190873!5m2!1sru!2sru" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       </div>
       <div class="footer-block__content footer-content">
         <a href="index.html" class="footer-content__logo-link">
