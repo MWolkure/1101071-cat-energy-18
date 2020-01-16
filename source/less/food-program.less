@@ -31,8 +31,18 @@
   text-transform: uppercase;
   color: #000000;
   padding-top: 20px;
-  box-sizing: border-box;
   display: block;
+  position: relative;
+  width: 87px;
+  padding-right: 37px;
+}
+
+.food-program__btn-link::after { /*стрелка*/
+  content: url("../img/icon-right-arrow-long.svg");
+  width: 24px;
+  position: absolute;
+  bottom: 2px;
+  right: 0;
 }
 
 .food-program__title {
@@ -76,14 +86,6 @@
   z-index: 2;
 }
 
-.food-program__btn-link::after { /*стрелка*/
-  content: url("../img/icon-right-arrow-long.svg");
-  width: 24px;
-  position: absolute;
-  bottom: 25px;
-  left: 120px;
-}
-
 @media (min-width: @tablet) {
   .food-program__item {
     width: 708px;
@@ -99,7 +101,7 @@
     border: none;
     font-size: 16px;
     line-height: 24px;
-    width: 372px;//не переносится "и" во втором блоке :(
+    width: 372px;
     padding-bottom: 30px;
   }
 
@@ -107,6 +109,12 @@
     line-height: 20px;
     font-size: 20px;
     padding-top: 30px;
+    width: 108px;
+    padding-right: 49px
+  }
+
+  .food-program__btn-link::after {//стрелка
+    bottom: 3px;
   }
 
   .food-program__title {
@@ -134,11 +142,6 @@
     width: 268px;
     top: 140px;
     left: 415px;
-  }
-
-  .food-program__btn-link::after {//стрелка
-    bottom: 66px;
-    left: 185px;
   }
 }
 
@@ -204,6 +207,7 @@
   }
 
   .food-program__btn-link {
-    padding: 0;
+    padding-top: 0;
+    padding-right: 49px;
   }
 }

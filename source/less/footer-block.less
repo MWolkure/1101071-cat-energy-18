@@ -40,8 +40,6 @@
   line-height: 20px;
   text-align: left;
   padding-right: 20px;
-  /*чёртова буква К в этом блоке не желает переноситься,
-   ни размером блока, ни <br> Т_Т как её,а?*/
 }
 
 .footer-block__text-right {
@@ -55,7 +53,7 @@
 @media (min-width: @tablet) {
   .footer-block__address {
     width: 708px;
-    padding: 60px 42px;
+    padding: 58px 42px;
   }
 
   .footer-block__text-left {
@@ -69,7 +67,12 @@
     line-height: 20px;
     width: 155px;
     margin-left: auto;
-    text-align: right; // и как этот чёртов пробел сделать перед "Санкт-Петербург"??спаном пустым?
+    text-align: right; 
+  }
+
+  .footer-block__span {
+    margin-top: 20px;
+    display: inline-block;
   }
 
   .footer-block__map-wrap {
