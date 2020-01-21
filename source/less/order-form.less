@@ -38,8 +38,38 @@
   line-height: 24px;
   text-transform: none;
   font-weight: 400;
-  margin: 0 auto 30px auto;
-  width: 280px;
+  margin-bottom:30px;
+  width: 181px;
+}
+
+.order-form__title--comment {
+  width: 122px;
+}
+.order-form__title--extra {
+  width: 140px;
+}
+
+.order-form__title-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.order-form__title-wrapper::before {//зеленая полоска
+  content: "";
+  background-color: @color-main;
+  height: 3px;
+  margin-right: 20px;
+  margin-top: 13px;
+  width: calc(50vw - 170px);
+}
+
+.order-form__title-wrapper::after {//зеленая полоска
+  content: "";
+  background-color: @color-main;
+  height: 3px;
+  margin-left: 20px;
+  margin-top: 13px;
+  flex-grow: 1;
 }
 
 .order-form__section--info {
@@ -97,6 +127,19 @@
   box-sizing: border-box;
   border: 1px solid #e6e6e6;
   flex-grow: 1;
+}
+
+.order-form__field:hover {
+  border: 1px solid #cdcdcd;
+}
+
+.order-form__field:active {
+  border: 2px solid #444444;
+}
+
+.order-form__field:active + .order-form__icon-mail,
+.order-form__field:active + .order-form__icon-phone {
+  fill: @color-main;
 }
 
 .order-form__icon-mail {
@@ -181,6 +224,37 @@
   left: -36px;
   top: 2px;
 }
+
+.order-form__radio-label:hover {
+  cursor: pointer;
+}
+
+.order-form__radio-label:hover + .order-form__radio-label::before {
+  border: 1px solid #bcbcbc;
+}
+
+.order-form__radio-label:active {
+  color: #cecece;
+}
+
+.order-form__radio-label:active + .order-form__radio-label::before {
+  border: 1px solid #ebebeb; //почему не работает?
+}
+
+.order-form__radio-label:active + .order-form__radio-label::after {
+  background-color: #d1e9c3;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 //квадратная рамка инпут
 .order-form__checkbox-label::before {
@@ -313,10 +387,31 @@
   .order-form__title {
     font-size: 36px;
     line-height: 36px;
-    width: 708px;
-    padding-left: 40px;
-    box-sizing: border-box;
+    width: 550px;
     margin-bottom: 75px;
+  }
+  /*в заголовке контактные данные если сделать ширину меньше, то последнее слово 
+  переносится, а если оставить так - то слишком много места до зеленой полоски.
+  почему там пустое место после скобки? */
+
+  .order-form__title--comment {
+    width: 186px;
+  }
+
+  .order-form__title--extra {
+    width: 220px;
+    padding-left: 3px;
+  }
+
+  .order-form__title-wrapper:before {
+    margin-top: 17px;
+    margin-right: 40px;
+    width: calc(50vw - 360px);
+  }
+
+  .order-form__title-wrapper:after {
+    margin-top: 17px;
+    margin-left: 40px;
   }
 
   .order-form__text-before {
@@ -356,8 +451,15 @@
     box-sizing: border-box;
   }
 
-  .order-form__title {
-    width: 1300px;
+  .order-form__title-wrapper:before {
+    margin-top: 17px;
+    margin-right: 40px;
+    width: calc(50vw - 660px);
+  }
+
+  .order-form__title-wrapper:after {
+    margin-top: 17px;
+    margin-left: 40px;
   }
 
   .order-form__text-before {
@@ -390,6 +492,14 @@
       width: 570px;
       padding: 0 40px;
     }
+  }
+
+  .order-form__icon-mail {
+    right: 60px;
+  }
+
+  .order-form__icon-phone {
+    right: 55px;
   }
 
   .order-form__section--comment {

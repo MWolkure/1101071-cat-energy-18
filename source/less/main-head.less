@@ -28,7 +28,16 @@
   background-color: @white;
 }
 
-.main-head__nav-btn::after {
+.main-head__nav-btn::before {//крест
+  content: url("../img/icon-close.svg");
+  width: 24px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: none;
+}
+
+.main-head__nav-btn::after {//бургер
   content: url("../img/icon-mobile-menu.svg");
   width: 24px;
   position: absolute;

@@ -1,7 +1,7 @@
 .food-program__item {
   background-color: @color-add;
   position: relative;
-  padding: 30px 21px 23px 21px;
+  padding: 30px 21px 0 21px;
   box-sizing: border-box;
   margin: 0 auto;
   width: 280px;
@@ -31,18 +31,28 @@
   text-transform: uppercase;
   color: #000000;
   padding-top: 20px;
-  display: block;
-  position: relative;
-  width: 87px;
-  padding-right: 37px;
+  padding-bottom: 23px;
+  display: flex;
+  width: 140px;
 }
 
-.food-program__btn-link::after { /*стрелка*/
-  content: url("../img/icon-right-arrow-long.svg");
+.food-program__btn-link:active {
+  color: #c5c6c6;
+}
+
+.food-program__btn-link svg { /*стрелка*/
   width: 24px;
-  position: absolute;
-  bottom: 2px;
-  right: 0;
+  margin-left: 20px;
+}
+
+.food-program__btn-link:hover svg {
+  /*????????  
+  как заменить на другую стрелку?
+   через <picture> как-то?*/
+}
+
+.food-program__btn-link:active svg {
+  fill: #c5c6c6;
 }
 
 .food-program__title {
@@ -109,8 +119,7 @@
     line-height: 20px;
     font-size: 20px;
     padding-top: 30px;
-    width: 108px;
-    padding-right: 49px
+    width: 170px;
   }
 
   .food-program__btn-link::after {//стрелка
