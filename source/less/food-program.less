@@ -44,18 +44,17 @@
   content: "";
   width: 24px;
   margin-left: 20px;
-  background-image: url(../img/icon-right-arrow-long.svg);
+  background-image: url(../img/icon-right-arrow-verylong.svg);
   background-repeat: no-repeat;
   background-position: center right;
-  background-size: auto;
+  background-size: auto 12px;
 }
 
 .food-program__btn-link:hover::after {
-  background-image: url(../img/icon-right-arrow-verylong.svg);
   width: 33px;
 }
 
-.food-program__btn-link:active svg {
+.food-program__btn-link:active::active {
   fill: #c5c6c6;
 }
 
