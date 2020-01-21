@@ -40,15 +40,18 @@
   color: #c5c6c6;
 }
 
-.food-program__btn-link svg { /*стрелка*/
+.food-program__btn-link::after { /*стрелка*/
+  content: "";
   width: 24px;
   margin-left: 20px;
+  background-image: url(../img/icon-right-arrow-long.svg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: auto;
 }
 
-.food-program__btn-link:hover svg {
-  /*????????  
-  как заменить на другую стрелку?
-   через <picture> как-то?*/
+.food-program__btn-link:hover::after {
+  width: 33px;
 }
 
 .food-program__btn-link:active svg {
