@@ -38,8 +38,38 @@
   line-height: 24px;
   text-transform: none;
   font-weight: 400;
-  margin: 0 auto 30px auto;
-  width: 280px;
+  margin-bottom:30px;
+  width: 181px;
+}
+
+.order-form__title--comment {
+  width: 122px;
+}
+.order-form__title--extra {
+  width: 140px;
+}
+
+.order-form__title-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.order-form__title-wrapper::before {//зеленая полоска
+  content: "";
+  background-color: @color-main;
+  height: 3px;
+  margin-right: 20px;
+  margin-top: 13px;
+  width: calc(50vw - 170px);
+}
+
+.order-form__title-wrapper::after {//зеленая полоска
+  content: "";
+  background-color: @color-main;
+  height: 3px;
+  margin-left: 20px;
+  margin-top: 13px;
+  flex-grow: 1;
 }
 
 .order-form__section--info {
@@ -97,6 +127,19 @@
   box-sizing: border-box;
   border: 1px solid #e6e6e6;
   flex-grow: 1;
+}
+
+.order-form__field:hover {
+  border: 1px solid #cdcdcd;
+}
+
+.order-form__field:active {
+  border: 2px solid #444444;
+}
+
+.order-form__field:active + .order-form__icon-mail,
+.order-form__field:active + .order-form__icon-phone {
+  fill: @color-main;
 }
 
 .order-form__icon-mail {
@@ -180,6 +223,32 @@
   position: absolute;
   left: -36px;
   top: 2px;
+  opacity: 0;
+}
+
+.order-form__row input[type="radio"]:checked + .order-form__radio-label::after {
+  opacity: 1;
+}
+
+.order-form__radio-label:hover {
+  cursor: pointer;
+}
+
+.order-form__radio-label:hover::before {
+  border: 1px solid #bcbcbc;
+  cursor: pointer;
+}
+
+.order-form__radio-label:active {
+  color: #cecece;
+}
+
+.order-form__radio-label:active::before {
+  border: 1px solid #ebebeb;
+}
+
+.order-form__radio-label:active::after {
+  background-color: #d1e9c3;
 }
 
 //квадратная рамка инпут
@@ -205,6 +274,32 @@
   position: absolute;
   left: 10px;
   top: -5px;
+  opacity: 0;
+}
+
+.order-form__row input[type="checkbox"]:checked + .order-form__checkbox-label::after {
+  opacity: 1;
+}
+
+.order-form__checkbox-label:hover {
+  cursor: pointer;
+}
+
+.order-form__checkbox-label:active {
+  color: #cecece;
+}
+
+.order-form__checkbox-label:hover::before {
+  cursor: pointer;
+  border: 1px solid #bababa;
+}
+
+.order-form__checkbox-label:active::before {
+  border: 1px solid #eaeaea;
+}
+
+.order-form__checkbox-label:active::after {
+  border-color: #d1e9c3;
 }
 
 @media (min-width: @tablet) {
@@ -286,8 +381,7 @@
     li {
       padding-left: 58px;
       margin-bottom: 55px;
-      width: 285px;/*??? как только ставишь ширину положенную,
-      324, то перенос не работает,в чём дело??*/
+      width: 285px;
       box-sizing: border-box;
     }
 
@@ -314,10 +408,28 @@
   .order-form__title {
     font-size: 36px;
     line-height: 36px;
-    width: 708px;
-    padding-left: 40px;
-    box-sizing: border-box;
+    width: 513px;
     margin-bottom: 75px;
+  }
+
+  .order-form__title--comment {
+    width: 186px;
+  }
+
+  .order-form__title--extra {
+    width: 220px;
+    padding-left: 3px;
+  }
+
+  .order-form__title-wrapper:before {
+    margin-top: 17px;
+    margin-right: 40px;
+    width: calc(50vw - 360px);
+  }
+
+  .order-form__title-wrapper:after {
+    margin-top: 17px;
+    margin-left: 40px;
   }
 
   .order-form__text-before {
@@ -357,8 +469,15 @@
     box-sizing: border-box;
   }
 
-  .order-form__title {
-    width: 1300px;
+  .order-form__title-wrapper:before {
+    margin-top: 17px;
+    margin-right: 40px;
+    width: calc(50vw - 660px);
+  }
+
+  .order-form__title-wrapper:after {
+    margin-top: 17px;
+    margin-left: 40px;
   }
 
   .order-form__text-before {
@@ -391,6 +510,14 @@
       width: 570px;
       padding: 0 40px;
     }
+  }
+
+  .order-form__icon-mail {
+    right: 60px;
+  }
+
+  .order-form__icon-phone {
+    right: 55px;
   }
 
   .order-form__section--comment {

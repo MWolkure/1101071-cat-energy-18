@@ -1,7 +1,7 @@
 .food-program__item {
   background-color: @color-add;
   position: relative;
-  padding: 30px 21px 23px 21px;
+  padding: 30px 21px 0 21px;
   box-sizing: border-box;
   margin: 0 auto;
   width: 280px;
@@ -31,8 +31,27 @@
   text-transform: uppercase;
   color: #000000;
   padding-top: 20px;
-  box-sizing: border-box;
-  display: block;
+  padding-bottom: 23px;
+  display: flex;
+  width: 140px;
+}
+
+.food-program__btn-link::after { /*стрелка*/
+  content: "";
+  width: 24px;
+  margin-left: 20px;
+  background-image: url(../img/icon-right-arrow-verylong.svg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: auto 12px;
+}
+
+.food-program__btn-link:hover::after {
+  width: 33px;
+}
+
+.food-program__btn-link:active {
+  opacity: 0.3;
 }
 
 .food-program__title {
@@ -76,19 +95,11 @@
   z-index: 2;
 }
 
-.food-program__btn-link::after { /*стрелка*/
-  content: url("../img/icon-right-arrow-long.svg");
-  width: 24px;
-  position: absolute;
-  bottom: 25px;
-  left: 120px;
-}
-
 @media (min-width: @tablet) {
   .food-program__item {
     width: 708px;
     margin: 0 auto;
-    padding: 63px 53px;
+    padding: 43px 53px;
   }
 
   .food-program__item:first-child {
@@ -107,12 +118,17 @@
     line-height: 20px;
     font-size: 20px;
     padding-top: 30px;
+    width: 170px;
+  }
+
+  .food-program__btn-link::after {//стрелка
+    bottom: 3px;
   }
 
   .food-program__title {
     font-size: 36px;
     line-height: 37px;
-    width: 372px;//не переносится "и" во втором блоке :(
+    width: 372px;
     padding: 20px 0 0 0; 
     margin-bottom: 26px;
   }
@@ -134,11 +150,6 @@
     width: 268px;
     top: 140px;
     left: 415px;
-  }
-
-  .food-program__btn-link::after {//стрелка
-    bottom: 66px;
-    left: 185px;
   }
 }
 
@@ -204,6 +215,7 @@
   }
 
   .food-program__btn-link {
-    padding: 0;
+    padding-top: 0;
+    padding-right: 49px;
   }
 }

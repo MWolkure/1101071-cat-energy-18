@@ -10,6 +10,7 @@
 .networks__link {
   text-decoration: none;
   align-self: center;
+  display: inline-flex;
 }
 
 .networks__link:not(:last-child) {
@@ -17,8 +18,12 @@
   margin-right: 40px;
 }
 
-.networks__link:first-child {
-  padding-bottom: 3px;
+.networks__link:hover .networks__icon {
+  fill: @color-main;
+}
+
+.networks__link:active .networks__icon{
+  fill: #c8e0ba;
 }
 
 @media (min-width: @tablet) {
@@ -26,6 +31,18 @@
     border: none;
     padding: 0;
     margin-left: auto;
+  }
+
+  .networks__link:first-child .networks__icon {
+    width: 30px;
+  }
+
+  .networks__link:nth-child(2) .networks__icon {
+    width: 23px;
+  }
+
+  .networks__link:nth-child(3) .networks__icon {
+    width: 14px;
   }
 
   .networks__link:not(:last-child) {
