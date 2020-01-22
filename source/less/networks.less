@@ -3,8 +3,37 @@
   justify-content: center;
   border-bottom: 1px solid #d9d9d9;
   box-sizing: border-box;
+  padding: 22px 0;
+  align-content: center;
 }
 
 .networks__link {
   text-decoration: none;
+  align-self: center;
+  display: inline-flex;
+}
+
+.networks__link:not(:last-child) {
+  box-sizing: border-box;
+  margin-right: 40px;
+}
+
+.networks__link:hover .networks__icon {
+  fill: @color-main;
+}
+
+.networks__link:active .networks__icon{
+  fill: #c8e0ba;
+}
+
+@media (min-width: @tablet) {
+  .networks {
+    border: none;
+    padding: 0;
+    margin-left: auto;
+  }
+
+  .networks__link:not(:last-child) {
+    margin-right: 29px;
+  }
 }

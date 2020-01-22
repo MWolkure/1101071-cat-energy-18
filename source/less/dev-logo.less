@@ -1,5 +1,8 @@
 .dev-logo {
   display: flex;
+  justify-content: flex-start;
+  padding-top: 22px;
+  align-items: center;
 }
 
 .dev-logo__text {
@@ -7,9 +10,33 @@
   font-family: "arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
-  color: #666666;
+  color: #000000;
+  vertical-align: middle;
+}
+
+.dev-logo__text:active {
+  color: #c8c8c8;
 }
 
 .dev-logo__logo {
   text-decoration: none;
+  margin-left: auto;
+}
+
+.dev-logo__logo:hover .dev-logo__img {
+  fill: @color-main;
+}
+.dev-logo__logo:active .dev-logo__img {
+  fill: #c8e0ba;
+}
+
+@media (min-width: @tablet) {
+  .dev-logo {
+    padding: 0;
+    margin-left: auto;
+  }
+
+  .dev-logo__logo {
+    padding-left: 23px;
+  }
 }

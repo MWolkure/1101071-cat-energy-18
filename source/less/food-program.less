@@ -1,20 +1,25 @@
-.food-program {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 .food-program__item {
   background-color: @color-add;
   position: relative;
+  padding: 30px 21px 0 21px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 280px;
+}
+
+.food-program__item:first-child {
+  margin-bottom: 20px;
 }
 
 .food-program__text {
   .text;
-  border-bottom: 1px solid #d9d9d9;
   text-align: left;
   font-family: "arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #d9d9d9;
+  box-sizing: border-box;
 }
 
 .food-program__btn-link {
@@ -24,44 +29,193 @@
   line-height: 16px;
   font-size: 16px;
   text-transform: uppercase;
-  color: #111111;
+  color: #000000;
+  padding-top: 20px;
+  padding-bottom: 23px;
+  display: flex;
+  width: 140px;
 }
 
-.food-program__title--slim::before {
-  content: url("../img/icon-cat-slim.svg");
-  width: 35px;
-  position: absolute;
-  top: 0;
-  left: 0;
+.food-program__btn-link::after { /*стрелка*/
+  content: "";
+  width: 24px;
+  margin-left: 20px;
+  background-image: url(../img/icon-right-arrow-verylong.svg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: auto 12px;
 }
 
-.food-program__title--fat::before {
-  content: url("../img/icon-cat-pro.svg");
-  width: 67px;
-  position: absolute;
-  top: 0;
-  left: 0;
+.food-program__btn-link:hover::after {
+  width: 33px;
+}
+
+.food-program__btn-link:active {
+  opacity: 0.3;
 }
 
 .food-program__title {
   .text;
   text-transform: uppercase;
   font-size: 24px;
+  line-height: 37px;
   font-weight: 400;
-  &::after { /*зеленый круг*/  //почему он НАД иконками, хоть до них в коде поставь,хоть после?
+  margin-bottom: 36px;
+  text-align: left;
+  padding-left: 71px;
+
+  &::after { /*зеленый круг*/
     content: "";
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background-color: @color-main;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 24px;
+    left: 22px;
+    z-index: 1;
   }
 }
 
-.food-program__btn::after { /*стрелка*/
-  content: url("../img/icon-right-arrow-long.svg");
-  width: 24px;
+.food-program__title--slim::before {
+  content: url("../img/icon-cat-slim.svg");
+  width: 35px;
   position: absolute;
+  top: 22px;
+  left: 30px;
+  z-index: 2;
+}
+
+.food-program__title--fat::before {
+  content: url("../img/icon-cat-pro.svg");
+  width: 67px;
+  position: absolute;
+  top: 35px;
+  left: 13px;
+  z-index: 2;
+}
+
+@media (min-width: @tablet) {
+  .food-program__item {
+    width: 708px;
+    margin: 0 auto;
+    padding: 43px 53px;
+  }
+
+  .food-program__item:first-child {
+    margin-bottom: 30px;
+  }
+
+  .food-program__text {
+    border: none;
+    font-size: 16px;
+    line-height: 24px;
+    width: 372px;
+    padding-bottom: 30px;
+  }
+
+  .food-program__btn-link {
+    line-height: 20px;
+    font-size: 20px;
+    padding-top: 30px;
+    width: 170px;
+  }
+
+  .food-program__btn-link::after {//стрелка
+    bottom: 3px;
+  }
+
+  .food-program__title {
+    font-size: 36px;
+    line-height: 37px;
+    width: 372px;
+    padding: 20px 0 0 0; 
+    margin-bottom: 26px;
+  }
+
+  .food-program__title::after { //круг
+    width: 200px;
+    height: 200px;
+    top: 95px;
+    left: 450px;
+  }
+
+  .food-program__title--slim::before {
+    width: 140px;
+    top: 85px;
+    left: 480px;
+  }
+
+  .food-program__title--fat::before {
+    width: 268px;
+    top: 140px;
+    left: 415px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .food-program__item-wrap {
+    display: inline-flex;
+  }
+
+  .food-program__item:first-child {
+    margin-right: 80px;
+    margin-bottom: 0;
+  }
+
+  .food-program__item {
+    width: 570px;
+  }
+
+  .food-program__title {
+    margin-bottom: 77px;
+    text-align: right;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .food-program__title--slim {
+    padding-right: 141px;
+  }
+
+   .food-program__title--fat {
+    padding-right: 100px;
+   }
+
+  .food-program__title::after {
+    width: 100px;
+    height: 100px;
+  }
+
+  .food-program__title--slim::before {
+    width: 70px;
+    top: 45px;
+    left: 70px;
+  }
+
+  .food-program__title--fat::before {
+    width: 134px;
+    top: 75px;
+    left: 38px;
+  }
+
+  .food-program__title--slim::after {
+    top: 50px;
+    left: 53px;
+  }
+
+  .food-program__title--fat::after {
+    top: 50px;
+    left: 53px;
+  }
+
+  .food-program__text {
+    width: 463px;
+    padding-bottom: 36px;
+  }
+
+  .food-program__btn-link {
+    padding-top: 0;
+    padding-right: 49px;
+  }
 }
