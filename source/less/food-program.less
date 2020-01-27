@@ -1,7 +1,7 @@
 .food-program__item {
   background-color: @color-add;
   position: relative;
-  padding: 30px 21px 0 21px;
+  padding: 30px 19px 0 19px;
   box-sizing: border-box;
   margin: 0 auto;
   width: 280px;
@@ -17,7 +17,7 @@
   font-family: "arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
-  padding-bottom: 24px;
+  padding-bottom: 21px;
   border-bottom: 1px solid #d9d9d9;
   box-sizing: border-box;
 }
@@ -31,7 +31,7 @@
   text-transform: uppercase;
   color: #000000;
   padding-top: 20px;
-  padding-bottom: 23px;
+  padding-bottom: 21px;
   display: flex;
   width: 140px;
 }
@@ -39,11 +39,11 @@
 .food-program__btn-link::after { /*стрелка*/
   content: "";
   width: 24px;
-  margin-left: 20px;
+  margin-left: 12px;
   background-image: url(../img/icon-right-arrow-verylong.svg);
   background-repeat: no-repeat;
   background-position: center right;
-  background-size: auto 12px;
+  background-size: 33px 12px;
 }
 
 .food-program__btn-link:hover::after {
@@ -60,7 +60,7 @@
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
-  margin-bottom: 36px;
+  margin-bottom: 29px;
   text-align: left;
   padding-left: 71px;
 
@@ -99,7 +99,7 @@
   .food-program__item {
     width: 708px;
     margin: 0 auto;
-    padding: 43px 53px;
+    padding: 55px 53px 40px 53px;
   }
 
   .food-program__item:first-child {
@@ -114,15 +114,20 @@
     padding-bottom: 30px;
   }
 
+  .food-program__text--smaller {
+    width: 344px;//для переноса текста по макету
+  }
+
   .food-program__btn-link {
     line-height: 20px;
     font-size: 20px;
-    padding-top: 30px;
+    padding-top: 26px;
     width: 170px;
   }
 
   .food-program__btn-link::after {//стрелка
     bottom: 3px;
+    margin-left: 25px;
   }
 
   .food-program__title {
@@ -156,6 +161,7 @@
 @media (min-width: @desktop) {
   .food-program__item-wrap {
     display: inline-flex;
+    margin-bottom: 25px;
   }
 
   .food-program__item:first-child {
@@ -189,33 +195,33 @@
 
   .food-program__title--slim::before {
     width: 70px;
-    top: 45px;
-    left: 70px;
+    top: 40px;
+    left: 65px;
   }
 
   .food-program__title--fat::before {
     width: 134px;
-    top: 75px;
-    left: 38px;
+    top: 70px;
+    left: 35px;
   }
 
   .food-program__title--slim::after {
-    top: 50px;
-    left: 53px;
+    top: 48px;
+    left: 51px;
   }
 
   .food-program__title--fat::after {
-    top: 50px;
+    top: 48px;
     left: 53px;
   }
 
   .food-program__text {
     width: 463px;
-    padding-bottom: 36px;
+    padding-bottom: 0;
   }
 
   .food-program__btn-link {
-    padding-top: 0;
+    padding-top: 30px;
     padding-right: 49px;
   }
 }

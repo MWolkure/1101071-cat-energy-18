@@ -11,7 +11,11 @@
     <div class="main-head__wrapper-all">
       <div class="main-head__wrapper">
         <a href="index.html" class="main-head__logo-link">
-          <img src="img/logo-mobile.svg" alt="логотип" class="main-head__logo" width="191">
+          <picture>
+            <source media="(min-width:1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width:768px)" srcset="img/logo-tablet.svg">  
+            <img src="img/logo-mobile.svg" alt="логотип" class="main-head__logo" width="191">
+          </picture>
         </a>
         <button type="button" class="main-head__nav-btn">
           <span class="visually-hidden">Управление меню</span>
@@ -52,15 +56,15 @@
         <div class="order-form__radio-wrapper">
           <ul class="order-form__section order-form__section--radio">
             <li class="order-form__row">
-              <input type="radio" class="visually-hidden" id="slim-inp" checked>
+              <input type="radio" class="visually-hidden" id="slim-inp" name="radio-btn" checked>
               <label class="order-form__radio-label" for="slim-inp">Похудение</label>
             </li>
             <li class="order-form__row">
-              <input type="radio" class="visually-hidden" id="fat-inp">
+              <input type="radio" class="visually-hidden" id="fat-inp" name="radio-btn">
               <label class="order-form__radio-label" for="fat-inp">Набор массы</label>
             </li>
             <li class="order-form__row">
-              <input type="radio" class="visually-hidden" id="ask-inp">
+              <input type="radio" class="visually-hidden" id="ask-inp" name="radio-btn">
               <label class="order-form__radio-label" for="ask-inp">Не знаю (нужен ваш совет)</label>
             </li>
           </ul>
@@ -94,7 +98,7 @@
         <h2 class="order-form__title order-form__title--comment">Комментарий</h2>
       </div>
       <div class="order-form__section order-form__section--comment">
-        <textarea class="order-form__comment" rows="8" cols="43">Расскажите обо всех повадках кота</textarea>
+        <textarea class="order-form__comment">Расскажите обо всех повадках кота</textarea>
       </div>
       <div class="order-form__title-wrapper">
         <h2 class="order-form__title order-form__title--extra">Дополнительно</h2>

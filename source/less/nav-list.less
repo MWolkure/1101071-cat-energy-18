@@ -24,6 +24,7 @@
 .nav-list__link {
   text-decoration: none;
   color: #111111;
+  letter-spacing: -0.6px;
 }
 
 .nav-list__link:hover {
@@ -66,6 +67,14 @@
 @media (min-width: @desktop) {
   .nav-list {
     font-size: 20px;
+  }
+
+  .nav-list__element {
+    padding-top: 0;
+  }
+
+  .nav-list__element:not(:first-child) {
+    padding-left: 34px;
   }
 
   .nav-list__link--index {
