@@ -53,6 +53,7 @@
 .order-form__title-wrapper {
   position: relative;
   display: flex;
+  width: auto;
 }
 
 .order-form__title-wrapper::before {//зеленая полоска
@@ -157,10 +158,6 @@
   right: 12px;
 }
 
-.order-form__title-wrapper {
-  width: auto;
-}
-
 .order-form__text-before {
   .text;
   font-size: 14px;
@@ -193,7 +190,6 @@
   text-transform: uppercase;
   border: 1px solid #e6e6e6;
   box-sizing: border-box;
-  resize: none;
   padding: 13px 15px;
   width: 100%;
   height: 150px;
@@ -330,7 +326,7 @@
     height: 52px;
   }
 
-  .order-form__icon-phone{
+  .order-form__icon-phone {
     top: 16px;
     right: 16px;
   }
@@ -451,13 +447,13 @@
     margin-bottom: 65px;
   }
 
-  .order-form__title-wrapper:before {
+  .order-form__title-wrapper::before {
     margin-top: 22px;
     margin-right: 40px;
     width: calc(50vw - 360px);
   }
 
-  .order-form__title-wrapper:after {
+  .order-form__title-wrapper::after {
     margin-top: 22px;
     margin-left: 40px;
   }
@@ -506,13 +502,13 @@
     margin-bottom: 55px;
   }
 
-  .order-form__title-wrapper:before {
+  .order-form__title-wrapper::before {
     margin-top: 21px;
     margin-right: 40px;
     width: calc(50vw - 660px);
   }
 
-  .order-form__title-wrapper:after {
+  .order-form__title-wrapper::after {
     margin-top: 21px;
     margin-left: 40px;
   }
